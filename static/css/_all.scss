@@ -1,0 +1,24 @@
+$black: #000;
+$white: #fff;
+$gray: #ccc;
+
+
+$first_neue: "TTFirsNeue";
+$montserrat: "Montserrat";
+
+.d_flex{
+  display: flex
+}
+
+.d_none{
+  display: none;
+  color: lighten($black, 0.9)
+}
+
+main {
+  padding-top: 70px;
+}
+
+section:not(:first-child){
+  padding: 50px 0;
+}
