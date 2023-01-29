@@ -5,7 +5,7 @@
 ?>
 <?php get_header(); ?>
     <section class="main_frame">
-
+        
         <div class="icons_bg">
             <div class="left_side">
                 <img src="<?php echo get_template_directory_uri()?>/static/img/icons/anchor.png" alt="">
@@ -25,6 +25,9 @@
                 <img src="<?php echo get_template_directory_uri()?>/static/img/icons/tattoo_heart.png" alt="">
                 <img src="<?php echo get_template_directory_uri()?>/static/img/icons/tattoo_studio.png" alt=""> 
             </div>
+        </div>
+        <div class="icons_bg_layout">
+                
         </div>
 
         <div class="container">
