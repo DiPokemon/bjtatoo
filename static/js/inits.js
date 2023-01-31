@@ -22,25 +22,16 @@ $(document).ready(function () {
     });          
           
     $('.slider_wrapper').each(function (index, sliderWrap) {
-        var $advantages = $(sliderWrap).find('.advantages_block');              
+        var $main_slider = $(sliderWrap).find('.main_slider');              
 
-        $advantages.slick({
+        $main_slider.slick({
             infinite: true,
             autoplay: true,
             dots: false,
             arrows: false,
             cssEase: 'linear',
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                  breakpoint: 550,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
-                }
-              ]
+            slidesToShow: 1,
+            slidesToScroll: 1,            
         });   
 
     });

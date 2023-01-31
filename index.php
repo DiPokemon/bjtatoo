@@ -7,16 +7,16 @@
     <section class="main_frame">
         
         <div class="icons_bg">
-            <div class="left_side">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/anchor.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/chair.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/diamond.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/eye.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/flower.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/needles.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/skull.png" alt="">
+            <div id="left_side_icons" class="left_side">
+                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/anchor.png" alt="">
+                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/chair.png" alt="">
+                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/diamond.png" alt="">
+                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/eye.png" alt="">
+                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/flower.png" alt="">
+                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/needles.png" alt="">
+                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/skull.png" alt="">
             </div>
-            <div class="right_side">
+            <div id="right_side_icons" class="right_side">
                 <img src="<?php echo get_template_directory_uri()?>/static/img/icons/swallow.png" alt="">
                 <img src="<?php echo get_template_directory_uri()?>/static/img/icons/tattoo.png" alt="">
                 <img src="<?php echo get_template_directory_uri()?>/static/img/icons/tattoo_fist.png" alt="">
@@ -30,13 +30,29 @@
                 
         </div>
 
-        <div class="container">
+        <div class="main_container">
+          <div class="container">
             <div class="half_column">
-                
+                <h1>Тату салон Блек Джек - профессиональная студия татуировки в Ростове-на-Дону</h1>
             </div>
             <div class="half_column">
+              <div class="slider_wrapper">
+                <div class="main_slider">
+                  <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_1.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_2.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_3.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_4.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_5.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_6.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_7.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_8.jpg" alt="">
+                </div>
+              </div>
                 
+                <?php echo do_shortcode('[contact-form-7 id="15" title="Контактная форма 1"]')?>
             </div>
+          </div>
+            
         </div>
 
     </section>

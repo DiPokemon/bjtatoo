@@ -246,68 +246,168 @@ section:not(:first-child) {
   height: calc(100vh - 70px);
 }
 .main_frame .icons_bg .left_side img:nth-child(1) {
-  top: 10px;
-  left: 10px;
+  top: 10%;
+  left: 82px;
 }
 .main_frame .icons_bg .left_side img:nth-child(2) {
-  top: 20px;
-  left: 20px;
+  top: 20%;
+  left: 229px;
 }
 .main_frame .icons_bg .left_side img:nth-child(3) {
-  top: 30px;
-  left: 30px;
+  top: 30%;
+  left: 123px;
 }
 .main_frame .icons_bg .left_side img:nth-child(4) {
-  top: 40px;
-  left: 40px;
+  top: 40%;
+  left: 360px;
 }
 .main_frame .icons_bg .left_side img:nth-child(5) {
-  top: 50px;
-  left: 50px;
+  top: 50%;
+  left: 305px;
 }
 .main_frame .icons_bg .left_side img:nth-child(6) {
-  top: 60px;
-  left: 60px;
+  top: 60%;
+  left: 136px;
 }
 .main_frame .icons_bg .left_side img:nth-child(7) {
-  top: 70px;
-  left: 70px;
+  top: 70%;
+  left: 214px;
 }
 .main_frame .icons_bg .right_side img:nth-child(1) {
-  top: 10px;
-  right: 10px;
+  top: 25%;
+  right: 271px;
 }
 .main_frame .icons_bg .right_side img:nth-child(2) {
-  top: 20px;
-  right: 20px;
+  top: 35%;
+  right: 145px;
 }
 .main_frame .icons_bg .right_side img:nth-child(3) {
-  top: 30px;
-  right: 30px;
+  top: 45%;
+  right: 398px;
 }
 .main_frame .icons_bg .right_side img:nth-child(4) {
-  top: 40px;
-  right: 40px;
+  top: 55%;
+  right: 183px;
 }
 .main_frame .icons_bg .right_side img:nth-child(5) {
-  top: 50px;
-  right: 50px;
+  top: 65%;
+  right: 54px;
 }
 .main_frame .icons_bg .right_side img:nth-child(6) {
-  top: 60px;
-  right: 60px;
+  top: 80%;
+  right: 267px;
 }
 .main_frame .icons_bg .right_side img:nth-child(7) {
-  top: 70px;
-  right: 70px;
+  top: 85%;
+  right: 135px;
 }
 .main_frame .icons_bg img {
   width: 40px;
   position: absolute;
 }
-.main_frame .container {
-  height: 500px;
-  border: 1px solid #000;
+.main_frame .icons_bg_layout {
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+.main_frame .main_container {
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main_frame .main_container .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.main_frame .main_slider {
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 0px 5px #000;
+          box-shadow: 0px 0px 5px #000;
+}
+.main_frame .main_slider .slick-slide > div,
+.main_frame .main_slider .slick-slide img {
+  height: 400px;
+}
+.main_frame .main_slider .slick-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main_frame .wpcf7 input, .main_frame .wpcf7 textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #bb0303;
+  border-radius: 0;
+}
+.main_frame .wpcf7 input::-webkit-input-placeholder, .main_frame .wpcf7 textarea::-webkit-input-placeholder {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+}
+.main_frame .wpcf7 input::-moz-placeholder, .main_frame .wpcf7 textarea::-moz-placeholder {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+}
+.main_frame .wpcf7 input:-ms-input-placeholder, .main_frame .wpcf7 textarea:-ms-input-placeholder {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+}
+.main_frame .wpcf7 input::-ms-input-placeholder, .main_frame .wpcf7 textarea::-ms-input-placeholder {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+}
+.main_frame .wpcf7 input::placeholder, .main_frame .wpcf7 textarea::placeholder {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+}
+.main_frame .wpcf7 .wpcf7 textarea {
+  padding-top: 8px;
+}
+.main_frame .wpcf7 .wpcf7-submit {
+  border: 0;
+  background-color: #bb0303;
+  font-family: "TTFirsNeue";
+  color: #fff;
+  text-transform: uppercase;
+}
+.main_frame .wpcf7 .wpcf7-submit:hover {
+  border: 1px solid #bb0303;
+  background-color: #fff;
+  color: #bb0303;
+}
+.main_frame .wpcf7 .wpcf7-not-valid-tip {
+  margin-top: -10px;
+  font-size: 12px;
+  text-transform: lowercase;
+  font-family: "Montserrat";
+  font-weight: 300;
+}
+.main_frame .wpcf7 .wpcf7-spinner {
+  display: none;
+}
+.main_frame .wpcf7 .wpcf7-response-output {
+  font-family: "Montserrat";
+  font-size: 14px;
+  margin: 0;
+  padding: 10px;
+}
+.main_frame h1 {
+  font-family: "TTFirsNeue";
+  font-size: 24px;
 }
 
 @media (max-width: 900px) {
