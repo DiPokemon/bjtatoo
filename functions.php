@@ -1,4 +1,16 @@
 <?php
+// подключаем carbon fields
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+    require_once( get_template_directory().'/inc/carbon-fields/vendor/autoload.php' );
+    \Carbon_Fields\Carbon_Fields::boot();
+}
+
+add_action( 'carbon_fields_register_fields', 'bjtattoo_register_custom_fields' );
+function bjtattoo_register_custom_fields() {
+	require get_template_directory() . '/inc/custom-fields/theme-options.php';
+}
+
 //включаем поддержку кастомного лога из настроек
 add_theme_support( 'custom-logo' );
 

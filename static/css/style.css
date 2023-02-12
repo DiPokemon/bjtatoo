@@ -196,8 +196,8 @@ section:not(:first-child) {
   height: 100%;
   z-index: 2;
   background-color: #fff;
-  -webkit-box-shadow: 0px 1px 5px #ccc;
-          box-shadow: 0px 1px 5px #ccc;
+  -webkit-box-shadow: 0px 1px 5px rgba(221, 221, 221, 0.4705882353);
+          box-shadow: 0px 1px 5px rgba(221, 221, 221, 0.4705882353);
 }
 
 .logo_img {
@@ -351,43 +351,53 @@ section:not(:first-child) {
   margin-bottom: 10px;
   height: 40px;
   padding: 5px;
-  border: 1px solid #bb0303;
+  border: 1px solid rgba(221, 221, 221, 0.4705882353);
   border-radius: 0;
 }
 .main_frame .wpcf7 input::-webkit-input-placeholder, .main_frame .wpcf7 textarea::-webkit-input-placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(221, 221, 221, 0.4705882353);
 }
 .main_frame .wpcf7 input::-moz-placeholder, .main_frame .wpcf7 textarea::-moz-placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(221, 221, 221, 0.4705882353);
 }
 .main_frame .wpcf7 input:-ms-input-placeholder, .main_frame .wpcf7 textarea:-ms-input-placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(221, 221, 221, 0.4705882353);
 }
 .main_frame .wpcf7 input::-ms-input-placeholder, .main_frame .wpcf7 textarea::-ms-input-placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(221, 221, 221, 0.4705882353);
 }
 .main_frame .wpcf7 input::placeholder, .main_frame .wpcf7 textarea::placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(221, 221, 221, 0.4705882353);
 }
-.main_frame .wpcf7 .wpcf7 textarea {
-  padding-top: 8px;
+.main_frame .wpcf7 textarea {
+  padding-top: 11px;
 }
 .main_frame .wpcf7 .wpcf7-submit {
   border: 0;
-  background-color: #bb0303;
+  background-color: #000;
   font-family: "TTFirsNeue";
   color: #fff;
   text-transform: uppercase;
 }
 .main_frame .wpcf7 .wpcf7-submit:hover {
   border: 1px solid #bb0303;
-  background-color: #fff;
-  color: #bb0303;
+  background-color: #bb0303;
+  color: #fff;
 }
 .main_frame .wpcf7 .wpcf7-not-valid-tip {
   margin-top: -10px;
@@ -410,6 +420,22 @@ section:not(:first-child) {
   font-size: 24px;
 }
 
+.portfolio_slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.portfolio_slider img {
+  height: 150px;
+  width: 150px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px -5px #000;
+          box-shadow: 0px 0px 10px -5px #000;
+}
+
 @media (max-width: 900px) {
   .header_container {
     padding: 5px 10px;
@@ -430,7 +456,7 @@ section:not(:first-child) {
     max-width: 100%;
   }
   .logo_img,
-.header_burger {
+  .header_burger {
     z-index: 2;
   }
   .header_burger {
@@ -450,7 +476,7 @@ section:not(:first-child) {
     transition: all 0.3s ease 0s;
   }
   .header_burger::before,
-.header_burger::after {
+  .header_burger::after {
     content: "";
     position: absolute;
     background-color: #000;
