@@ -4,7 +4,7 @@ use Carbon_Fields\Field;
 
 // Default options page
 $basic_options_container = Container::make( 'theme_options', __( 'Настройки темы' ) )
-    ->set_icon( 'dashicons-admin-customizer' )
+    ->set_icon( 'dashicons-welcome-learn-more' )
     ->add_tab( __( 'Контакты' ), array(
         Field::make( 'text', 'crb_main_phone', __( 'Основной телефон' ) )
             ->set_width(33),
@@ -24,15 +24,18 @@ $basic_options_container = Container::make( 'theme_options', __( 'Настрой
             ->set_width(33),
     ) )
     ->add_tab( __( 'Адрес' ), array(
-        Field::make( 'text', 'crb_adress_city', __( 'Город' ) ),
-        Field::make( 'text', 'crb_adress_street', __( 'Улица' ) ),
-        Field::make( 'text', 'crb_adress_build', __( 'Дом' ) ),
-        Field::make( 'text', 'crb_adress_index', __( 'Индекс' ) ),
+        Field::make( 'text', 'crb_adress_city', __( 'Город' ) )
+            ->set_width(50),
+        Field::make( 'text', 'crb_adress_street', __( 'Улица' ) )
+            ->set_width(50),
+        Field::make( 'text', 'crb_adress_build', __( 'Дом' ) )
+            ->set_width(50),
+        Field::make( 'text', 'crb_adress_index', __( 'Индекс' ) )
+            ->set_width(50),
     ) );
 
 Container::make( 'theme_options', __( 'Главная страница' ) )
-    ->set_page_parent( $basic_options_container ) // reference to a top level container
-    
+    ->set_page_parent( $basic_options_container ) // reference to a top level container    
 
     ->add_tab( __( 'Фоновые иконки' ), array(
         Field::make( 'complex', 'crb_main_icons_left',  __('Иконки слева') )
@@ -81,9 +84,24 @@ Container::make( 'theme_options', __( 'Главная страница' ) )
                 Field::make( 'rich_text', 'crb_main_service_text', __('Текст') )
                     ->set_width(70),
             ) )        
-    ) )
-
-    ->add_fields( array(
-        Field::make( 'text', 'crb_main_service_title', __( 'Заголовок услуги' ) ),
-        Field::make( 'text', 'crb_twitter_link', __( 'Twitter Link' ) ),
     ) );
+
+Container::make('theme_options',__( 'Testimonials' ) )
+    ->set_page_parent( $basic_options_container ) // reference to a top level container   
+    ->add_fields(array(
+        Field::make('complex','crb_testimonial',__('Testimonial'))
+            ->add_fields(array(
+                Field::make('text','crb_testimonial_name',__('Name') )
+                    ->set_width(50),
+                Field::make('text','crb_testimonial_second_name',__('Second Name') )
+                    ->set_width(50),
+                Field::make('rich_text','crb_testimonial_text',__('Текст')),
+                Field::make('date','crb_testimonial_date',__('Дата'))
+                    ->set_width(50),
+                Field::make('text','crb_testimonial_rating',__('Rating'))
+                    ->set_attribute('type', 'number')
+                    ->set_attribute('min', '0')
+                    ->set_attribute('max', '5')
+                    ->set_width(50),
+            ))
+     ) ); 
