@@ -68,15 +68,16 @@
 
     <section>
       <div class="container">
+
         <div class="text_block">
           <h2 class="text_title">Татуировка</h2>
           <div class="text_body"></div>
         </div>
+
       </div>
     </section>
 
-
-    <section class="page__question question">
+    <section>
               <div class="question__container container">
                 <div class="question__body">
                   <!-- <div class="question-triple_stars_left"><img loading="lazy" class="triple-stars" src="<?php echo get_template_directory_uri()?>/static/img/triple_stars.svg" alt="img"></div>                   -->
