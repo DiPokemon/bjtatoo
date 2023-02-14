@@ -5,31 +5,25 @@
 ?>
 <?php get_header(); ?>
 <?php
-  
+  $title = carbon_get_theme_option( 'crb_main_title' );
+  $left_icons = carbon_get_theme_option( 'crb_main_icons_left' );
+  $right_icons = carbon_get_theme_option( 'crb_main_icons_right' );
+  $portfolio = carbon_get_theme_option( 'crb_portfolio' );
+  $services = carbon_get_theme_option( 'crb_main_services' );
 ?>
 
     <section class="main_frame">
         
         <div class="icons_bg">
             <div id="left_side_icons" class="left_side">
-
-
-                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/anchor.png" alt="">
-                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/chair.png" alt="">
-                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/diamond.png" alt="">
-                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/eye.png" alt="">
-                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/flower.png" alt="">
-                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/needles.png" alt="">
-                <img class="float_icon" src="<?php echo get_template_directory_uri()?>/static/img/icons/skull.png" alt="">
+              <?php foreach( $left_icons as $icon ) : ?>
+                <img class="float_icon" src="<?= $icon['crb_main_icon_img']; ?>" alt="<?= $icon['crb_main_icon_alt']; ?>" title="<?= $icon['crb_main_icon_title']; ?>">
+              <?php endforeach; ?>
             </div>
             <div id="right_side_icons" class="right_side">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/swallow.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/tattoo.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/tattoo_fist.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/tattoo_guitar.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/tattoo_hand.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/tattoo_heart.png" alt="">
-                <img src="<?php echo get_template_directory_uri()?>/static/img/icons/tattoo_studio.png" alt=""> 
+              <?php foreach( $right_icons as $icon ) : ?>
+                <img class="float_icon" src="<?= $icon['crb_main_icon_img']; ?>" alt="<?= $icon['crb_main_icon_alt']; ?>" title="<?= $icon['crb_main_icon_title']; ?>">
+              <?php endforeach; ?>                
             </div>
         </div>
 
@@ -38,7 +32,7 @@
         <div class="main_container">
           <div class="container">
             <div class="half_column">
-                <h1>Тату салон Блек Джек - профессиональная студия татуировки в Ростове-на-Дону</h1>
+                <h1><?= $title; ?></h1>
             </div>
             <div class="half_column">                
                 <?php echo do_shortcode('[contact-form-7 id="15" title="Контактная форма 1"]')?>
@@ -48,32 +42,25 @@
     </section>
 
     <section>
-      <div class="container">
-          
+      <div class="container">          
         <div class="slider_wrapper">
           <div class="portfolio_slider">
-            <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_1.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_2.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_3.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_4.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_5.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_6.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_7.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri()?>/static/img/main_slider/portfolio_8.jpg" alt="">         
+            <?php foreach( $portfolio as $portfolio_item ) : ?>
+                <img src="<?= $portfolio_item['crb_portfolio_img']; ?>" alt="<?= $portfolio_item['crb_portfolio_alt']; ?>" title="<?= $portfolio_item['crb_portfolio_title']; ?>">
+            <?php endforeach; ?>
           </div>
         </div>        
-        
       </div>
     </section>
 
     <section>
       <div class="container">
-
-        <div class="text_block">
-          <h2 class="text_title">Татуировка</h2>
-          <div class="text_body"></div>
-        </div>
-
+        <?php foreach( $services as $service ) : ?>
+          <div class="text_block">
+            <h2 class="text_title"><?= $service['crb_main_service_title']; ?></h2>
+            <div class="text_body"><?= apply_filters('the_content', $service['crb_main_service_text']); ?></div>
+          </div>
+        <?php endforeach; ?>
       </div>
     </section>
 
