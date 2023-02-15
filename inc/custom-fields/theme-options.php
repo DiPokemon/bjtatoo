@@ -88,6 +88,16 @@ Container::make( 'theme_options', __( 'Главная страница', 'tattoo
                 Field::make( 'rich_text', 'crb_main_service_text', __('Текст', 'tattoo_theme') )
                     ->set_width(70),
             ) )        
+    ) )
+
+    ->add_tab( __( 'FAQ', 'tattoo_theme' ), array(
+        Field::make( 'complex', 'crb_main_faq', __('Вопрос/Ответ', 'tattoo_theme') )
+            ->add_fields( array(
+                Field::make( 'text', 'crb_main_question', __('Вопрос', 'tattoo_theme') )
+                    ->set_width(50),
+                Field::make( 'rich_text', 'crb_main_service_answer', __('Ответ', 'tattoo_theme') )
+                    ->set_width(50),
+            ) )        
     ) );
 
 Container::make('theme_options',__( 'Отзывы', 'tattoo_theme' ) )

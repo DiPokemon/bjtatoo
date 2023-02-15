@@ -27,3 +27,15 @@ section:not(:first-child){
 .half_column{
   width: 50%;
 }
+
+body{
+  font-family: $montserrat;
+}
+
+p{
+  padding: 5px 0;
+}
+
+h2,h3{
+  padding: 10px 0;
+}
