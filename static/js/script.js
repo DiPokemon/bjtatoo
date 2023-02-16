@@ -20,3 +20,18 @@ $(document).ready(function () {
         $('body').toggleClass('lock')
     });
 });                       
+
+var acc = document.getElementsByClassName("faq");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var faq_body = this.querySelector('.faq_body');
+    if (faq_body.style.maxHeight){
+        faq_body.style.maxHeight = null;
+    } else {
+        faq_body.style.maxHeight = faq_body.scrollHeight + "px";
+    } 
+  });
+}

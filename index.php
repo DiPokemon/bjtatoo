@@ -10,6 +10,8 @@
   $right_icons = carbon_get_theme_option( 'crb_main_icons_right' );
   $portfolio = carbon_get_theme_option( 'crb_portfolio' );
   $services = carbon_get_theme_option( 'crb_main_services' );
+  $faq_title = carbon_get_theme_option( 'crb_main_faq_title' );
+  $faq_items = carbon_get_theme_option( 'crb_main_faq' );
 ?>
 
     <section class="main_frame">
@@ -64,6 +66,25 @@
       </div>
     </section>
 
+    <section itemscope itemtype="https://schema.org/FAQPage">
+      <div class="container">
+        <div class="section_title">
+          <h2><?= $faq_title; ?></h2>
+        </div>
+        <?php foreach( $faq_items as $faq ) : ?>
+
+          <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq">
+            <button class="faq_title"><span itemprop="name"><?= $faq['crb_main_question']; ?></span></button>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="faq_body">
+              <p itemprop="text"><?= $faq['crb_main_answer']; ?></p>
+            </div>
+          </div>
+          
+          
+        <?php endforeach; ?>
+      </div>
+    </section>   
+    
     <section>
               <div class="question__container container">
                 <div class="question__body">
