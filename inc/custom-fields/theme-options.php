@@ -24,13 +24,13 @@ $basic_options_container = Container::make( 'theme_options', __( 'Настрой
             ->set_width(33),
     ) )
     ->add_tab( __( 'Адрес', 'tattoo_theme' ), array(
-        Field::make( 'text', 'crb_adress_city', __( 'Город', 'tattoo_theme' ) )
+        Field::make( 'text', 'crb_address_city', __( 'Город', 'tattoo_theme' ) )
             ->set_width(50),
-        Field::make( 'text', 'crb_adress_street', __( 'Улица', 'tattoo_theme' ) )
+        Field::make( 'text', 'crb_address_street', __( 'Улица', 'tattoo_theme' ) )
             ->set_width(50),
-        Field::make( 'text', 'crb_adress_build', __( 'Дом', 'tattoo_theme' ) )
+        Field::make( 'text', 'crb_address_build', __( 'Дом', 'tattoo_theme' ) )
             ->set_width(50),
-        Field::make( 'text', 'crb_adress_index', __( 'Индекс', 'tattoo_theme' ) )
+        Field::make( 'text', 'crb_address_index', __( 'Индекс', 'tattoo_theme' ) )
             ->set_width(50),
     ) );
 
@@ -105,19 +105,25 @@ Container::make( 'theme_options', __( 'Главная страница', 'tattoo
 Container::make('theme_options',__( 'Отзывы', 'tattoo_theme' ) )
     ->set_page_parent( $basic_options_container ) // reference to a top level container   
     ->add_fields(array(
+        Field::make( 'text', 'crb_main_testimonials_title', __('Заголовок секции отзывов', 'tattoo_theme')),
         Field::make('complex','crb_testimonial',__('Отзыв', 'tattoo_theme'))
             ->add_fields(array(
+                Field::make('image','crb_testimonial_img',__('Фото', 'tattoo_theme') )
+                    ->set_value_type( 'url' )
+                    ->set_width(33),
                 Field::make('text','crb_testimonial_name',__('Имя', 'tattoo_theme') )
-                    ->set_width(50),
+                    ->set_width(33),
                 Field::make('text','crb_testimonial_second_name',__('Фамилия', 'tattoo_theme') )
-                    ->set_width(50),
-                Field::make('rich_text','crb_testimonial_text',__('Текст', 'tattoo_theme')),
+                    ->set_width(33),
+                Field::make('textarea','crb_testimonial_text',__('Текст', 'tattoo_theme'))
+                    ->set_width(60)
+                    ->set_rows(1),
                 Field::make('date','crb_testimonial_date',__('Дата', 'tattoo_theme'))
-                    ->set_width(50),
+                    ->set_width(30),
                 Field::make('text','crb_testimonial_rating',__('Оценка', 'tattoo_theme'))
                     ->set_attribute('type', 'number')
                     ->set_attribute('min', '0')
                     ->set_attribute('max', '5')
-                    ->set_width(50),
+                    ->set_width(10),
             ))
      ) ); 

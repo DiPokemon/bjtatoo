@@ -343,6 +343,11 @@
   }
 }
 
+.testimonial{
 
+  .testimonial_organization,.testimonial_rating{
+    display: none;
+  }
+}
 
 @import "adaptive";

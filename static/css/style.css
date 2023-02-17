@@ -492,6 +492,10 @@ h2, h3 {
   transition: max-height 0.2s ease-out;
 }
 
+.testimonial .testimonial_organization, .testimonial .testimonial_rating {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .header_container {
     padding: 5px 10px;
