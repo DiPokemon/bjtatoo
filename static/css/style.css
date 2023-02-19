@@ -451,7 +451,7 @@ h2, h3 {
 
 /* -- */
 .faq {
-  border: 1px solid #000;
+  border: 1px solid rgba(221, 221, 221, 0.4705882353);
   border-radius: 5px;
 }
 .faq:hover {
@@ -468,6 +468,7 @@ h2, h3 {
   border: none;
   font: inherit;
   background-color: transparent;
+  font-weight: 500;
   color: #000;
   cursor: pointer;
   padding: 18px;

@@ -295,7 +295,7 @@
 /* -- */
 
 .faq {
-  border:1px solid $black;
+  border:1px solid $gray;
   border-radius: 5px;
   
   &:hover{
@@ -319,7 +319,7 @@
     border: none;
     font: inherit;
     background-color: transparent;   
-
+    font-weight: 500;
     color: $black;
     cursor: pointer;
     padding: 18px;
