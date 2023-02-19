@@ -257,45 +257,30 @@ function breadcrumbs() {
 	}
 } 
 
+/* add Schema.Org in NavMenu */
 function filter_wp_nav_menu($nav_menu,$args) {
     global $schemaURL;
-
-    //map out the nav_menu for parsing
     $dom = new DOMDocument();
     @$dom->loadHTML('<?xml encoding="utf-8" ?>' . $nav_menu);
     $x = new DOMXPath($dom);
-
-    //parse the <a> nodes
     foreach($x->query("//a") as $node) {
         $node->setAttribute("itemprop","url");
     }
-
-    //parse the <li> nodes
     foreach($x->query("//li") as $node) {
         $node->setAttribute("itemprop","itemListElement");
 		$node->setAttribute("itemscope","");
 		$node->setAttribute("itemtype","http://schema.org/ItemList");
     }
-
-    //parse the <ul> nodes
     foreach($x->query("//ul") as $node) {
         $node->setAttribute("itemprop","about");
 		$node->setAttribute("itemscope","");
 		$node->setAttribute("itemtype","http://schema.org/ItemList");
     }
-
-    //parse the <nav> nodes
     foreach($x->query("//nav") as $node) {
-        $node->setAttribute("itemscope", "");
-        //$node->setAttribute("itemtype", $schemaURL.'SiteNavigationElement');		
+        $node->setAttribute("itemscope", "");	
 		$node->setAttribute("itemtype", "http://schema.org/SiteNavigationElement");	
-    }
-
-    //regenerate the html
-    //NOTE: this assumes only one nav node. Multiple nav nodes will break this filter	
-	
+    }	
     $nav_menu = $node->c14n();
     return $nav_menu ;
-
 }
 add_filter( 'wp_nav_menu', 'filter_wp_nav_menu', 10, 2 );
