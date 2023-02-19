@@ -492,6 +492,59 @@ h2, h3 {
   transition: max-height 0.2s ease-out;
 }
 
+.testimonials_slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.testimonials_slider .slick-track .slick-slide {
+  height: inherit !important;
+}
+.testimonials_slider .slick-track .slick-slide > div {
+  height: 100%;
+}
+
+.testimonial {
+  padding: 10px;
+  border: 1px solid rgba(221, 221, 221, 0.4705882353);
+  border-radius: 3px;
+  height: 100%;
+}
+.testimonial .testimonial_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.testimonial .testimonial_header .testimonial_author_img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+  height: 100%;
+}
+.testimonial .testimonial_header .testimonial_author_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-family: "TTFirsNeue";
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.testimonial .testimonial_text {
+  padding: 10px 10px 0px 10px;
+}
 .testimonial .testimonial_organization, .testimonial .testimonial_rating {
   display: none;
 }

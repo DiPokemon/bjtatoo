@@ -118,9 +118,9 @@
               <div id="testimonial_<?= $i; ?>" class="testimonial" itemscope itemtype="https://schema.org/Review">
 
                 <div class="testimonial_header" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                  <div class="testimonial_author_img">
-                    <img src="<?= $testimonial['crb_testimonial_img']; ?>" alt="Отзыв о тату-студии Black Jack от <?= $testimonial['crb_testimonial_name']; ?> <?= $testimonial['crb_testimonial_second_name']; ?>">
-                  </div>
+                  
+                  <img height="100px" width="100px" class="testimonial_author_img" src="<?= $testimonial['crb_testimonial_img']; ?>" alt="Отзыв о тату-студии Black Jack от <?= $testimonial['crb_testimonial_name']; ?> <?= $testimonial['crb_testimonial_second_name']; ?>">
+                  
                   <div class="testimonial_author_name">
                     <span itemprop="name"><?= $testimonial['crb_testimonial_name']; ?></span>
                     <?php if($testimonial['crb_testimonial_second_name']):?>
@@ -162,8 +162,6 @@
             <?php endforeach; ?>
           </div>
         </div>
-        
-
       </div>
     </section>
     

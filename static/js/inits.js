@@ -24,6 +24,7 @@ $(document).ready(function () {
     $('.slider_wrapper').each(function (index, sliderWrap) {
       var $main_slider = $(sliderWrap).find('.main_slider');  
       var $portfolio_slider = $(sliderWrap).find('.portfolio_slider'); 
+      var $testimonials_slider = $(sliderWrap).find('.testimonials_slider');
       // var $portfolio_slider_nav = $(sliderWrap).find('.portfolio_slider_nav'); 
 
         $main_slider.slick({
@@ -71,6 +72,30 @@ $(document).ready(function () {
             }
           ]
         });
+      
+        $testimonials_slider.slick({
+          infinite: true,
+          autoplay: true,
+          dots: false,
+          arrows: false,
+          cssEase: 'linear',
+          slidesToShow: 3,
+          slidesToScroll: 1,   
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,                
+              }
+            },
+            {
+              breakpoint: 500,
+              settings: {
+                slidesToShow: 1,                
+              }
+            }  
+          ]
+      });   
     });
 
     

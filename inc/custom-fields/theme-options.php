@@ -3,7 +3,7 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 // Default options page
-$basic_options_container = Container::make( 'theme_options', __( 'Настройки темы', 'tattoo_theme' ) )
+$basic_options_container = Container::make( 'theme_options', __( 'Theme options', 'tattoo_theme' ) )
     ->set_icon( 'dashicons-welcome-learn-more' )
     ->add_tab( __( 'Контакты', 'tattoo_theme' ), array(
         Field::make( 'text', 'crb_main_phone', __( 'Основной телефон', 'tattoo_theme' ) )
@@ -34,7 +34,7 @@ $basic_options_container = Container::make( 'theme_options', __( 'Настрой
             ->set_width(50),
     ) );
 
-Container::make( 'theme_options', __( 'Главная страница', 'tattoo_theme' ) )
+Container::make( 'theme_options', __( 'Main page', 'tattoo_theme' ) )
     ->set_page_parent( $basic_options_container ) // reference to a top level container   
     ->add_tab( __( 'Основное', 'tattoo_theme' ), array(
         Field::make( 'text', 'crb_main_title',  __('Заголовок H1', 'tattoo_theme') )
@@ -102,7 +102,7 @@ Container::make( 'theme_options', __( 'Главная страница', 'tattoo
             ) )        
     ) );
 
-Container::make('theme_options',__( 'Отзывы', 'tattoo_theme' ) )
+Container::make('theme_options',__( 'Testimonials', 'tattoo_theme' ) )
     ->set_page_parent( $basic_options_container ) // reference to a top level container   
     ->add_fields(array(
         Field::make( 'text', 'crb_main_testimonials_title', __('Заголовок секции отзывов', 'tattoo_theme')),
