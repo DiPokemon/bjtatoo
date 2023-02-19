@@ -309,6 +309,8 @@
 
       &::after {
         content: "\2212";
+        color: $red;
+        
       }
     }
   }
@@ -327,12 +329,18 @@
     font-size: 15px;
     transition: 0.4s;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     &::after{      
       content: '\002B';
       color: $black;
-      font-weight: bold;
+      // font-weight: bold;
       float: right;
       margin-left: 5px;
+      font-size: 30px;
+      line-height: 30px;
     }
   } 
 
