@@ -58,6 +58,10 @@
     font-size: 20px;
     text-transform: uppercase;
     color: $black;
+
+    &:hover{
+      color:$red;
+    }
 }
 
 
@@ -72,7 +76,11 @@
     font-weight: 600;
     font-size: 20px;
     text-transform: uppercase;
-    color: $black;;
+    color: $black;
+
+    &:hover{
+      color:$red;
+    }
   }
   
 }
@@ -405,6 +413,67 @@
   .testimonial_organization,.testimonial_rating{
     display: none;
   }
+}
+
+footer{
+  border-top: 1px solid $gray;
+  padding: 20px 0;  
+
+  .footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer_menu{
+      display: flex;      
+
+      .footer_menu_list{
+        display: flex;
+        gap: 10px;
+
+        a{
+          color: $black;
+          text-transform: uppercase;
+
+          &:hover{
+            color:$red;
+          }
+        }
+        
+      }
+    }
+
+    .footer_contacts {
+      display: flex;      
+      gap: 10px;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .footer_contacts_top{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        a{
+          color: $black;
+          font-size: 12px;
+        }
+      }
+
+      .footer_contacts_bottom{
+        display: flex;
+        gap: 10px;
+
+        i{
+          color: $red;
+          font-size: 20px;
+        }
+        
+      }
+    }
+
+  }
+
 }
 
 @import "adaptive";

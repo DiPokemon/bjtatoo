@@ -7,6 +7,7 @@ $basic_options_container = Container::make( 'theme_options', __( 'Theme options'
     ->set_icon( 'dashicons-welcome-learn-more' )
     ->add_tab( __( 'Контакты', 'tattoo_theme' ), array(
         Field::make( 'text', 'crb_main_phone', __( 'Основной телефон', 'tattoo_theme' ) )
+            ->set_attribute( 'placeholder', '+7 (***) ***-**-**' )            
             ->set_width(33),
         Field::make( 'text', 'crb_email', __( 'E-mail', 'tattoo_theme' ) )
             ->set_width(33),

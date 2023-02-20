@@ -51,9 +51,11 @@ function change_logo_class( $html ) {
 //правильное подключение CSS
 function load_styles()
 {
-  wp_enqueue_style('style_min', get_template_directory_uri().'/static/css/style.min.css');
-  wp_enqueue_style('slick', get_template_directory_uri().'/static/libs/slick/slick.css');
-  wp_enqueue_style('slick_theme', get_template_directory_uri().'/static/libs/slick/slick-theme.css');
+	wp_enqueue_style('fontawesome', get_template_directory_uri().'/static/fontawesome/scss/font-awesome.min.css');
+  	wp_enqueue_style('style_min', get_template_directory_uri().'/static/css/style.min.css');
+  	wp_enqueue_style('slick', get_template_directory_uri().'/static/libs/slick/slick.css');
+  	wp_enqueue_style('slick_theme', get_template_directory_uri().'/static/libs/slick/slick-theme.css');
+
 }; 
 add_action('wp_enqueue_scripts', 'load_styles', 10);
 
