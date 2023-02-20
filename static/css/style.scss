@@ -425,11 +425,12 @@ footer{
     align-items: center;
 
     .footer_menu{
-      display: flex;      
+      display: flex; 
+      justify-content: center;     
 
       .footer_menu_list{
         display: flex;
-        gap: 10px;
+        gap: 10px;        
 
         a{
           color: $black;
