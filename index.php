@@ -35,8 +35,7 @@
   $testimonial_items = carbon_get_theme_option( 'crb_testimonial' );
 ?>
 
-    <section class="main_frame">
-        
+    <section class="main_frame">        
         <div class="icons_bg">
             <div id="left_side_icons" class="left_side">
               <?php foreach( $left_icons as $icon ) : ?>
@@ -49,9 +48,7 @@
               <?php endforeach; ?>                
             </div>
         </div>
-
         <div class="icons_bg_layout"> </div>
-
         <div class="main_container">
           <div class="container">
             <div class="half_column">
@@ -78,12 +75,18 @@
 
     <section>
       <div class="container">
-        <?php foreach( $services as $service ) : ?>
-          <div class="text_block">
-            <h2 class="text_title"><?= $service['crb_main_service_title']; ?></h2>
-            <div class="text_body"><?= apply_filters('the_content', $service['crb_main_service_text']); ?></div>
+        <div class="services_tabs">
+          <?php foreach( $services as $i => $service ) : ?>
+            <div id="service_content_<?= $i ?>" class="text_body">
+              <?= apply_filters('the_content', $service['crb_main_service_text']); ?>
+            </div>
+          <?php endforeach; ?>
+          <div class="tabs__links">
+            <?php foreach( $services as $i => $service ) : ?>
+              <a href="#service_content_<?= $i ?>"><h2 class="text_title"><?= $service['crb_main_service_title']; ?></h2></a>
+            <?php endforeach; ?>            
           </div>
-        <?php endforeach; ?>
+        </div>
       </div>
     </section>
 
@@ -93,14 +96,12 @@
           <h2><?= $faq_title; ?></h2>
         </div>
         <?php foreach( $faq_items as $i => $faq ) : ?>
-
           <div id="<?= $i; ?>"class="faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
             <button class="faq_title"><span itemprop="name"><?= $faq['crb_main_question']; ?></span></button>
             <div class="faq_body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
               <p itemprop="text"><?= $faq['crb_main_answer']; ?></p>
             </div>
-          </div>         
-          
+          </div>          
         <?php endforeach; ?>
       </div>
     </section>
@@ -109,18 +110,13 @@
       <div class="container">
         <div class="section_title">
           <h2><?= $testimonials_title; ?></h2>
-        </div>
-        
+        </div>        
         <div class="slider_wrapper">
           <div class="testimonials_slider">
             <?php foreach($testimonial_items as $i => $testimonial): ?>
-
               <div id="testimonial_<?= $i; ?>" class="testimonial" itemscope itemtype="https://schema.org/Review">
-
-                <div class="testimonial_header" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                  
+                <div class="testimonial_header" itemprop="author" itemscope itemtype="https://schema.org/Person">                  
                   <img height="100px" width="100px" class="testimonial_author_img" src="<?= $testimonial['crb_testimonial_img']; ?>" alt="Отзыв о тату-студии Black Jack от <?= $testimonial['crb_testimonial_name']; ?> <?= $testimonial['crb_testimonial_second_name']; ?>">
-                  
                   <div class="testimonial_author_name">
                     <span itemprop="name"><?= $testimonial['crb_testimonial_name']; ?></span>
                     <?php if($testimonial['crb_testimonial_second_name']):?>
@@ -128,15 +124,12 @@
                     <?php endif; ?>
                   </div>                  
                 </div>
-
                 <meta itemprop="datePublished" content="<?= $testimonial['crb_testimonial_date']; ?>"/>
                 <meta itemprop="name" content="Отзыв о тату-студии Black Jack">
                 <link itemprop="url" href="<?= get_site_url() ?>/#testimonial_<?= $i; ?>">
-
                 <div class="testimonial_text" itemprop="reviewBody">
                   <?= $testimonial['crb_testimonial_text']; ?>
                 </div>
-
                 <div class="textimonial_organization" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
                     <meta itemprop="name" content="Отзыв о тату студии Black Jack">
                     <meta itemprop="telephone" content="<?= $contacts_main_phone ?>">
@@ -147,82 +140,16 @@
                         <meta itemprop="streetAddress" content="<?= $address_street ?>, <?= $address_building ?>">
                     </p>
                 </div>
-
                 <div class="testimonial_rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                   <meta itemprop="worstRating" content="1">
                   <meta itemprop="ratingValue" content="<?= $testimonial['crb_testimonial_rating']; ?>">
                   <meta itemprop="bestRating" content="5"/>
                 </div>
-
-
-
-
               </div>
-
             <?php endforeach; ?>
           </div>
         </div>
       </div>
     </section>
-    
-    <section>
-              <div class="question__container container">
-                <div class="question__body">
-                  <!-- <div class="question-triple_stars_left"><img loading="lazy" class="triple-stars" src="<?php echo get_template_directory_uri()?>/static/img/triple_stars.svg" alt="img"></div>                   -->
-                  <div class="question-content">
-                     <div class="question__title">
-                       <h2 class="_h2 question__title_h2 section_title">Вопрос/Ответ</h2>
-                     </div>
-                     <div class="main_block__wrapper">
-                       <div itemscope itemtype="https://schema.org/FAQPage" class="accordion faq_accordion" id="faq_accordion">                        
-                          <input type="checkbox" name="chacor" id="chacor5" />
-                          <label for="chacor5">Что такое SEO?</label>
-                          <div class="acor-body">
-                              <p>Seo (Search Engine Optimization) —  это совокупность работ, 
-                                направленных на внутреннюю и внешнюю  оптимизацию, за счет чего  
-                                происходит продвижение  сайта в ТОП-10 поисковой выдачи Яндекс или Google 
-                                по целевым запросам пользователей. ТОПом считается первая страница поисковика. 
-                                Поднять сайт в ТОП-10 — главная цель Seo-специалистов.</p>
-                          </div>
-                          <input type="checkbox" name="chacor" id="chacor6" />
-                          <label for="chacor6">Когда будет результат от SEO?</label>
-                          <div class="acor-body">
-                              <p>После проведение работ с сайтом поисковикам нужно время, чтобы его проиндексировать.
-                                 Поисковые запросы со временем начинают ранжироваться все выше и выше,
-                                  пока не попадут в  ТОП-10 позиций. 
-                                  Этот временной интервал всегда разный – в среднем от 2 до 6 месяцев.</p>
-                          </div>
-                          <input type="checkbox" name="chacor" id="chacor7" />
-                          <label for="chacor7">Какие гарантии вы можете  предоставить?</label>
-                          <div class="acor-body">
-                              <p>С каждым клиентом мы заключаем официальный договор. С помощью Seo  
-                                выведем Ваш сайт на показатели  70-90% собранных коммерческих ключевых 
-                                запросов в ТОП-10 по Ростову на Дону, а также всей России. Предоставим 
-                                подробную отчетность на каждом из этапов проделываемых работ. Вы можете 
-                                ознакомится с результаты наших успешных проектов  в разделе кейсы.</p>
-                          </div>
-                          <input type="checkbox" name="chacor" id="chacor8" />
-                          <label for="chacor8">Вы работаете только в Ростове на Дону?</label>
-                          <div class="acor-body">
-                              <p>Мы предоставляем услуги Seo как в Ростове на Дону, так и по 
-                                всей России. Также вы можете заказать раскрутку за рубежом.</p>
-                          </div>
-                          <input type="checkbox" name="chacor" id="chacor9" />
-                          <label for="chacor9">Какие работы вы проводите на проекте?</label>
-                          <div class="acor-body">
-                              <p>Команда наших специалистов вносит изменения в контент и функционал сайта. 
-                                Все предварительно согласовывается с клиентом. Мы оптимизируем существующий контент 
-                                и добавляем новый в соответствии с требованиями поисковых систем, при необходимости 
-                                можем менять функционал и структуру посадочных страниц.</p>
-                          </div>
-
-                         </div>
-                      </div>
-                    </div>
-                  <!-- <div class="question-triple_stars_right"><img loading="lazy" class="triple-stars" src="<?php echo get_template_directory_uri()?>/static/img/triple_stars.svg" alt="img"></div> -->
-                </div>
-              </div>
-            </section>
-
 
 <?php get_footer(); ?>
