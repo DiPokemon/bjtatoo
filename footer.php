@@ -10,7 +10,12 @@
             $contacts_inst = carbon_get_theme_option( 'crb_inst' );
           ?>
             <div class="container footer_container">
-              <div class="footer_logo logo_img"><?php the_custom_logo() ?> </div>
+              <div class="footer_logo logo_img">
+                <?php the_custom_logo() ?> 
+                <div class="footer_address">
+                  
+                </div>
+              </div>
                 <?php
                   $args = array(
                     'container'       => 'nav',          

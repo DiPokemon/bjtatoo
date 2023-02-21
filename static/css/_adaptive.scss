@@ -139,16 +139,40 @@
             gap:5px;
             flex-wrap: wrap;
             justify-content: center;
-
-            // a{
-            //     font-size:14px
-            // }
+            
         }       
     }
+
+    .services_tabs{
+        .tabs__links{
+            padding:10px 5px;
+    
+            a{
+                padding: 3px 5px;
+    
+                .text_title{
+                    font-size: 18px;
+                }
+            }            
+        }
+    }
+    
 }
 
 @media (max-width: 380px){
     .header_phone-link{
         font-size: 16px
+    }
+
+    .services_tabs{
+        .tabs__links{            
+            padding:10px 2px;
+
+            a{   
+                .text_title{
+                    font-size: 16px;
+                }
+            }            
+        }
     }
 }

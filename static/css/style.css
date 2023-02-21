@@ -455,7 +455,68 @@ h2, h3 {
           box-shadow: 0px 0px 10px -5px #000;
 }
 
-/* -- */
+.services_tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.services_tabs .tabs__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  white-space: nowrap;
+  gap: 10px;
+  padding: 10px;
+}
+.services_tabs .tabs__links a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 10px;
+  text-align: center;
+  color: #000;
+  border: 1px solid rgba(221, 221, 221, 0.4705882353);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 8px -5px #000;
+          box-shadow: 0px 0px 8px -5px #000;
+}
+.services_tabs .tabs__links a:hover {
+  color: #bb0303;
+  border-color: #bb0303;
+}
+.services_tabs .tabs__links a:active {
+  color: #bb0303;
+  border-color: #bb0303;
+}
+.services_tabs #service_content_0:target ~ .tabs__links > a[href="#service_content_0"],
+.services_tabs #service_content_1:target ~ .tabs__links > a[href="#service_content_1"],
+.services_tabs #service_content_2:target ~ .tabs__links > a[href="#service_content_2"] {
+  color: #bb0303;
+  border-color: #bb0303;
+  cursor: default;
+}
+.services_tabs > div:not(.tabs__links) {
+  display: none;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.services_tabs > div:target {
+  display: block;
+}
+
 .faq {
   border: 1px solid rgba(221, 221, 221, 0.4705882353);
   border-radius: 5px;
@@ -790,9 +851,24 @@ footer .footer_container .footer_contacts .footer_contacts_bottom i {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .services_tabs .tabs__links {
+    padding: 10px 5px;
+  }
+  .services_tabs .tabs__links a {
+    padding: 3px 5px;
+  }
+  .services_tabs .tabs__links a .text_title {
+    font-size: 18px;
+  }
 }
 @media (max-width: 380px) {
   .header_phone-link {
+    font-size: 16px;
+  }
+  .services_tabs .tabs__links {
+    padding: 10px 2px;
+  }
+  .services_tabs .tabs__links a .text_title {
     font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
