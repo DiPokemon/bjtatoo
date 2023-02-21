@@ -35,14 +35,12 @@
                   <a href="tel:<?= $contacts_main_phone ?>"><?= $contacts_main_phone ?></a>
                   <a href="mailto:<?= $contacts_mail ?>"><?= $contacts_mail ?></a>
                 </div>
-                <div class="footer_contacts_bottom">
-                  
+                <div class="footer_contacts_bottom">                  
                   <a href="<?= $contacts_vk ?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
                   <a href="<?= $contacts_wa ?>"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                   <a href="<?= $contacts_tg ?>"><i class="fa fa-telegram" aria-hidden="true"></i></a>
                   <a href="<?= $contacts_inst ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>  
-                </div>
-                                  
+                </div>                                  
               </div>              
             </div>
         </footer>    

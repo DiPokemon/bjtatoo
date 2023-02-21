@@ -628,6 +628,110 @@ h2, h3 {
   display: none;
 }
 
+.page_header {
+  padding: 20px 0;
+}
+.page_header .breadcrumbs__link {
+  color: #000;
+  text-decoration: underline;
+}
+.page_header .breadcrumbs__link:hover {
+  color: #bb0303;
+  text-decoration: none;
+}
+
+.page_content_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.page_content_wrapper .page_content {
+  width: 70%;
+}
+.page_content_wrapper .page_content_sidebar {
+  width: 30%;
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 input, .page_content_wrapper .page_content_sidebar .wpcf7 textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid rgba(221, 221, 221, 0.4705882353);
+  border-radius: 0;
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 input::-webkit-input-placeholder, .page_content_wrapper .page_content_sidebar .wpcf7 textarea::-webkit-input-placeholder {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(221, 221, 221, 0.4705882353);
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 input::-moz-placeholder, .page_content_wrapper .page_content_sidebar .wpcf7 textarea::-moz-placeholder {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(221, 221, 221, 0.4705882353);
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 input:-ms-input-placeholder, .page_content_wrapper .page_content_sidebar .wpcf7 textarea:-ms-input-placeholder {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(221, 221, 221, 0.4705882353);
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 input::-ms-input-placeholder, .page_content_wrapper .page_content_sidebar .wpcf7 textarea::-ms-input-placeholder {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(221, 221, 221, 0.4705882353);
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 input::placeholder, .page_content_wrapper .page_content_sidebar .wpcf7 textarea::placeholder {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(221, 221, 221, 0.4705882353);
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 textarea {
+  padding-top: 11px;
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 .wpcf7-submit {
+  border: 0;
+  background-color: #000;
+  font-family: "TTFirsNeue";
+  color: #fff;
+  text-transform: uppercase;
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 .wpcf7-submit:hover {
+  border: 1px solid #bb0303;
+  background-color: #bb0303;
+  color: #fff;
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 .wpcf7-not-valid-tip {
+  margin-top: -10px;
+  font-size: 12px;
+  text-transform: lowercase;
+  font-family: "Montserrat";
+  font-weight: 300;
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 .wpcf7-spinner {
+  display: none;
+}
+.page_content_wrapper .page_content_sidebar .wpcf7 .wpcf7-response-output {
+  font-family: "Montserrat";
+  font-size: 14px;
+  margin: 0;
+  padding: 10px;
+}
+.page_content_wrapper .page_content_sidebar .sidebar_socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.page_content_wrapper .page_content_sidebar .sidebar_socials i {
+  color: #bb0303;
+  font-size: 20px;
+}
+
 footer {
   border-top: 1px solid rgba(221, 221, 221, 0.4705882353);
   padding: 20px 0;
