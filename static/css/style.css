@@ -377,34 +377,35 @@ h2, h3 {
   font-family: "Montserrat";
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(221, 221, 221, 0.4705882353);
+  color: #9b9b9b;
 }
 .main_frame .wpcf7 input::-moz-placeholder, .main_frame .wpcf7 textarea::-moz-placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(221, 221, 221, 0.4705882353);
+  color: #9b9b9b;
 }
 .main_frame .wpcf7 input:-ms-input-placeholder, .main_frame .wpcf7 textarea:-ms-input-placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(221, 221, 221, 0.4705882353);
+  color: #9b9b9b;
 }
 .main_frame .wpcf7 input::-ms-input-placeholder, .main_frame .wpcf7 textarea::-ms-input-placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(221, 221, 221, 0.4705882353);
+  color: #9b9b9b;
 }
 .main_frame .wpcf7 input::placeholder, .main_frame .wpcf7 textarea::placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(221, 221, 221, 0.4705882353);
+  color: #9b9b9b;
 }
 .main_frame .wpcf7 textarea {
   padding-top: 11px;
+  padding-bottom: 0;
 }
 .main_frame .wpcf7 .wpcf7-submit {
   border: 0;
@@ -652,6 +653,16 @@ h2, h3 {
 .page_content_wrapper .page_content_sidebar {
   width: 30%;
 }
+.page_content_wrapper .page_content_sidebar .sidebar_text .sidebar_title {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: end;
+}
+.page_content_wrapper .page_content_sidebar .sidebar_text .sidebar_subtitle {
+  text-align: end;
+  font-size: 14px;
+  color: #9b9b9b;
+}
 .page_content_wrapper .page_content_sidebar .wpcf7 input, .page_content_wrapper .page_content_sidebar .wpcf7 textarea {
   width: 100%;
   margin-bottom: 10px;
@@ -664,34 +675,35 @@ h2, h3 {
   font-family: "Montserrat";
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(221, 221, 221, 0.4705882353);
+  color: #9b9b9b;
 }
 .page_content_wrapper .page_content_sidebar .wpcf7 input::-moz-placeholder, .page_content_wrapper .page_content_sidebar .wpcf7 textarea::-moz-placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(221, 221, 221, 0.4705882353);
+  color: #9b9b9b;
 }
 .page_content_wrapper .page_content_sidebar .wpcf7 input:-ms-input-placeholder, .page_content_wrapper .page_content_sidebar .wpcf7 textarea:-ms-input-placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(221, 221, 221, 0.4705882353);
+  color: #9b9b9b;
 }
 .page_content_wrapper .page_content_sidebar .wpcf7 input::-ms-input-placeholder, .page_content_wrapper .page_content_sidebar .wpcf7 textarea::-ms-input-placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(221, 221, 221, 0.4705882353);
+  color: #9b9b9b;
 }
 .page_content_wrapper .page_content_sidebar .wpcf7 input::placeholder, .page_content_wrapper .page_content_sidebar .wpcf7 textarea::placeholder {
   font-family: "Montserrat";
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(221, 221, 221, 0.4705882353);
+  color: #9b9b9b;
 }
 .page_content_wrapper .page_content_sidebar .wpcf7 textarea {
   padding-top: 11px;
+  padding-bottom: 0;
 }
 .page_content_wrapper .page_content_sidebar .wpcf7 .wpcf7-submit {
   border: 0;
@@ -721,15 +733,38 @@ h2, h3 {
   margin: 0;
   padding: 10px;
 }
-.page_content_wrapper .page_content_sidebar .sidebar_socials {
+.page_content_wrapper .page_content_sidebar .sidebar_contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.page_content_wrapper .page_content_sidebar .sidebar_contacts .sidebar_phone {
+  color: #000;
+  text-decoration: underline;
+}
+.page_content_wrapper .page_content_sidebar .sidebar_contacts .sidebar_phone:hover {
+  color: #bb0303;
+  text-decoration: none;
+}
+.page_content_wrapper .page_content_sidebar .sidebar_contacts .sidebar_socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-.page_content_wrapper .page_content_sidebar .sidebar_socials i {
+.page_content_wrapper .page_content_sidebar .sidebar_contacts .sidebar_socials i {
   color: #bb0303;
   font-size: 20px;
+}
+.page_content_wrapper .page_content_sidebar .sidebar_contacts .sidebar_socials i:hover {
+  font-size: 22px;
 }
 
 footer {
@@ -927,6 +962,32 @@ footer .footer_container .footer_contacts .footer_contacts_bottom i {
     height: 200px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .page_content_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page_content_wrapper .page_content,
+  .page_content_wrapper .page_content_sidebar {
+    width: 100%;
+  }
+  .page_content_wrapper .page_content .sidebar_text .sidebar_title,
+  .page_content_wrapper .page_content_sidebar .sidebar_text .sidebar_title {
+    font-size: 20px;
+    text-align: start;
+  }
+  .page_content_wrapper .page_content .sidebar_text .sidebar_subtitle,
+  .page_content_wrapper .page_content_sidebar .sidebar_text .sidebar_subtitle {
+    text-align: start;
+    font-size: 14px;
+  }
+  .page_content_wrapper .page_content .sidebar_contacts,
+  .page_content_wrapper .page_content_sidebar .sidebar_contacts {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   footer .footer_container {
     -ms-flex-wrap: wrap;

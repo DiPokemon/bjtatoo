@@ -33,11 +33,15 @@ $contacts_inst = carbon_get_theme_option( 'crb_inst' );
                         <p class="sidebar_subtitle">Позвоните или напишите нам в соцсетях</p>
                     </div>
                     <?php echo do_shortcode('[contact-form-7 id="15" title="Контактная форма 1"]')?>
-                    <div class="sidebar_socials">                  
-                        <a href="<?= $contacts_vk ?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                        <a href="<?= $contacts_wa ?>"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-                        <a href="<?= $contacts_tg ?>"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-                        <a href="<?= $contacts_inst ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>  
+                    <div class="sidebar_contacts"> 
+                        <a class="sidebar_phone" href="tel:<?= $contacts_main_phone ?>"><?= $contacts_main_phone ?></a>   
+                        <div class="sidebar_socials">
+                            <a href="<?= $contacts_vk ?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                            <a href="<?= $contacts_wa ?>"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                            <a href="<?= $contacts_tg ?>"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                            <a href="<?= $contacts_inst ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>  
+                        </div>              
+                        
                     </div> 
                 </div>
                 

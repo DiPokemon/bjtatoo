@@ -115,6 +115,31 @@
         object-fit: cover;
     }    
 
+    .page_content_wrapper{
+        flex-direction: column;
+
+        .page_content,
+        .page_content_sidebar{
+            width:100%;
+
+            .sidebar_text{
+                .sidebar_title{
+                    font-size: 20px;
+                    text-align: start;      
+                }
+                .sidebar_subtitle{
+                  text-align: start;
+                  font-size: 14px;
+                }
+            }
+
+            .sidebar_contacts{
+                align-items: flex-start;
+            }
+        }
+        
+    }
+
     footer{
         .footer_container{            
             flex-wrap: wrap;
