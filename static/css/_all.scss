@@ -40,3 +40,11 @@ p{
 h2,h3{
   padding: 10px 0;
 }
+
+a{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:active{
+    background-color: transparent; 
+  } 
+}

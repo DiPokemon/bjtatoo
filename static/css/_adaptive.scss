@@ -106,9 +106,24 @@
         align-items: center;
     }
     
-    .half_column{
-            width: 100%;
+    .main_frame{
+
+        .main_container{
+
+            .container{
+                flex-direction: column;
+                justify-content: center;
+
+                .half_column{
+                    width: 100%;
+                }
+            }
         }
+    }
+
+    .half_column{
+        width: 100%;
+    }
 
     .contact_text img{
         height: 200px;

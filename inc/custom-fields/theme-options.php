@@ -36,9 +36,10 @@ $basic_options_container = Container::make( 'theme_options', __( 'Theme options'
     ) );
 
 Container::make( 'theme_options', __( 'Main page', 'tattoo_theme' ) )
-    ->set_page_parent( $basic_options_container ) // reference to a top level container   
+    ->set_page_parent( $basic_options_container )
     ->add_tab( __( 'Основное', 'tattoo_theme' ), array(
-        Field::make( 'text', 'crb_main_title',  __('Заголовок H1', 'tattoo_theme') )
+        Field::make( 'text', 'crb_main_title',  __('Заголовок H1', 'tattoo_theme') ),
+        Field::make( 'textarea', 'crb_main_description',  __('Описание', 'tattoo_theme') )
     ) ) 
 
     ->add_tab( __( 'Фоновые иконки', 'tattoo_theme' ), array(
@@ -104,7 +105,7 @@ Container::make( 'theme_options', __( 'Main page', 'tattoo_theme' ) )
     ) );
 
 Container::make('theme_options',__( 'Testimonials', 'tattoo_theme' ) )
-    ->set_page_parent( $basic_options_container ) // reference to a top level container   
+    ->set_page_parent( $basic_options_container )
     ->add_fields(array(
         Field::make( 'text', 'crb_main_testimonials_title', __('Заголовок секции отзывов', 'tattoo_theme')),
         Field::make('complex','crb_testimonial',__('Отзыв', 'tattoo_theme'))

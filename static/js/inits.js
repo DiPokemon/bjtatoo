@@ -25,7 +25,6 @@ $(document).ready(function () {
       var $main_slider = $(sliderWrap).find('.main_slider');  
       var $portfolio_slider = $(sliderWrap).find('.portfolio_slider'); 
       var $testimonials_slider = $(sliderWrap).find('.testimonials_slider');
-      // var $portfolio_slider_nav = $(sliderWrap).find('.portfolio_slider_nav'); 
 
         $main_slider.slick({
             infinite: true,
@@ -97,7 +96,6 @@ $(document).ready(function () {
           ]
       });   
     });
-
     
   function setEqualHeight(columns) {
     var tallestcolumn = 0;
@@ -110,6 +108,38 @@ $(document).ready(function () {
       }
     );
     columns.attr('style', 'height:' + tallestcolumn + 'px');
-  }
-   
+  }  
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = (tabsSelector, tabsHeadSelector, tabsBodySelector, tabsCaptionSelector, tabsCaptionActiveClass, tabsContentActiveClass) => { // объявляем основную функцию tabs, которая будет принимать CSS классы и селекторы
+    const tabs = document.querySelector(tabsSelector)
+    const head = tabs.querySelector(tabsHeadSelector)
+    const body = tabs.querySelector(tabsBodySelector)
+    const getActiveTabName = () => {
+      return head.querySelector(`.${tabsCaptionActiveClass}`).dataset.tab
+    }
+    const setActiveContent = () => {
+      if (body.querySelector(`.${tabsContentActiveClass}`)) {
+        body.querySelector(`.${tabsContentActiveClass}`).classList.remove(tabsContentActiveClass)
+      }
+      body.querySelector(`[data-tab=${getActiveTabName()}]`).classList.add(tabsContentActiveClass)
+    }
+    if (!head.querySelector(`.${tabsCaptionActiveClass}`)) {
+      head.querySelector(tabsCaptionSelector).classList.add(tabsCaptionActiveClass) 
+    }
+    setActiveContent(getActiveTabName())
+    head.addEventListener('click', e => {
+      const caption = e.target.closest(tabsCaptionSelector)
+      if (!caption) return
+      if (caption.classList.contains(tabsCaptionActiveClass)) return 
+
+      if (head.querySelector(`.${tabsCaptionActiveClass}`)) { 
+        head.querySelector(`.${tabsCaptionActiveClass}`).classList.remove(tabsCaptionActiveClass) 
+      }
+      caption.classList.add(tabsCaptionActiveClass)
+      setActiveContent(getActiveTabName()) 
+    })
+  }
+  tabs('.section_tabs', '.tabs_head', '.tabs_body', '.tabs_caption', 'tabs_caption_active', 'tabs_content_active')
+})

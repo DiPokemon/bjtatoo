@@ -6,6 +6,7 @@
 <?php get_header(); ?>
 <?php
   $title = carbon_get_theme_option( 'crb_main_title' );
+  $description = carbon_get_theme_option( 'crb_main_description' );
 
   $contacts_main_phone = carbon_get_theme_option( 'crb_main_phone' );
   $contacts_add_phone = carbon_get_theme_option( 'crb_second_phone' );
@@ -53,6 +54,9 @@
           <div class="container">
             <div class="half_column">
                 <h1><?= $title; ?></h1>
+                <div class="main_desctiption">
+                  <?= $description; ?>
+                </div>
             </div>
             <div class="half_column">                
                 <?php echo do_shortcode('[contact-form-7 id="15" title="Контактная форма 1"]')?>
@@ -75,17 +79,23 @@
 
     <section>
       <div class="container">
-        <div class="services_tabs">
-          <?php foreach( $services as $i => $service ) : ?>
-            <div id="service_content_<?= $i ?>" class="text_body">
-              <?= apply_filters('the_content', $service['crb_main_service_text']); ?>
-            </div>
-          <?php endforeach; ?>
-          <div class="tabs__links">
+
+        <div class="section_tabs tabs">
+
+          <div class="tabs_head">
             <?php foreach( $services as $i => $service ) : ?>
-              <a href="#service_content_<?= $i ?>"><h2 class="text_title"><?= $service['crb_main_service_title']; ?></h2></a>
+              <div class="tabs_caption" data-tab="service_<?= $i ?>"><h2 class="text_title"><?= $service['crb_main_service_title']; ?></h2></div>
             <?php endforeach; ?>            
           </div>
+          
+          <div class="tabs_body">
+            <?php foreach( $services as $i => $service ) : ?>
+              <div class="text_body tabs_content" data-tab="service_<?= $i ?>">
+                <?= apply_filters('the_content', $service['crb_main_service_text']); ?>
+              </div>
+            <?php endforeach; ?>
+          </div>
+
         </div>
       </div>
     </section>
