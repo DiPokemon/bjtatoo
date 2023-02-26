@@ -138,4 +138,16 @@ Container::make('theme_options',__( 'Testimonials', 'tattoo_theme' ) )
                     ->set_attribute('max', '5')
                     ->set_width(10),
             ))
-     ) ); 
+     ) );
+
+Container::make('theme_options',__( 'Sidebar', 'tattoo_theme' ) )
+     ->set_page_parent( $basic_options_container )
+     ->add_fields(array(
+        Field::make( 'text', 'crb_sidebar_title', __('Sidebar title', 'tattoo_theme'))
+            ->set_width(50),
+        Field::make( 'textarea', 'crb_sidebar_description', __('Sidebar description', 'tattoo_theme'))
+            ->set_width(50)
+            ->set_rows(1),
+         
+             
+      ) ); 

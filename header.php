@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include 'template-parts/variables.php' ?>
 <html lang="ru">
     <head itemscope itemtype="http://schema.org/WPHeader">
         <meta charset="<?php bloginfo('charset'); ?>">
@@ -7,13 +8,13 @@
         <?php wp_head();?>
         
     </head>
-
+    
     <body>
         <header>      
             <div class="d_flex header_container">
                 <div class="header_wrapper container">
                     <div class="logo_img"><?php the_custom_logo() ?></div>
-                    <div class="header_phone"><a href="tel:+79381097773" class="header_phone-link">+7 938 109-77-73</a></div>
+                    <div class="header_phone"><a href="tel:<?= $contacts_main_phone ?>" class="header_phone-link"><?= $contacts_main_phone ?></a></div>
                     <div class="header_burger">
                         <span></span>
                     </div>

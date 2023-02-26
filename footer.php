@@ -1,14 +1,6 @@
         </main>
         <footer>
-          <?php
-            $contacts_main_phone = carbon_get_theme_option( 'crb_main_phone' );
-            $contacts_add_phone = carbon_get_theme_option( 'crb_second_phone' );
-            $contacts_mail = carbon_get_theme_option( 'crb_email' );
-            $contacts_vk = carbon_get_theme_option( 'crb_vk' );
-            $contacts_wa = carbon_get_theme_option( 'crb_wa' );
-            $contacts_tg = carbon_get_theme_option( 'crb_tg' );
-            $contacts_inst = carbon_get_theme_option( 'crb_inst' );
-          ?>
+        <?php include 'template-parts/variables.php' ?>
             <div class="container footer_container">
               <div class="footer_logo logo_img">
                 <?php the_custom_logo() ?> 
@@ -36,10 +28,7 @@
                   <a href="mailto:<?= $contacts_mail ?>"><?= $contacts_mail ?></a>
                 </div>
                 <div class="footer_contacts_bottom">                  
-                  <a href="<?= $contacts_vk ?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                  <a href="<?= $contacts_wa ?>"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-                  <a href="<?= $contacts_tg ?>"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-                  <a href="<?= $contacts_inst ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>  
+                  <?php get_template_part( 'template-parts/socials' ); ?>
                 </div>                                  
               </div>              
             </div>

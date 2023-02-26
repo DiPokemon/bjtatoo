@@ -257,7 +257,7 @@ function breadcrumbs() {
 		}
 		echo $wrap_after;
 	}
-} 
+}
 
 /* add Schema.Org in NavMenu */
 function filter_wp_nav_menu($nav_menu,$args) {

@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php include 'template-parts/variables.php' ?>
 <section>
     <div class="container page_header">
         <h1 class="page_title"><?php the_title(); ?></h1>
@@ -43,6 +44,12 @@
             <?php }	?> 
 
         </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <?php get_template_part( 'template-parts/form', 'horizontal' ); ?>
     </div>
 </section>
 
