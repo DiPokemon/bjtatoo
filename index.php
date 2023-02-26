@@ -54,12 +54,12 @@
           <div class="container">
             <div class="half_column">
                 <h1><?= $title; ?></h1>
-                <div class="main_desctiption">
+                <div class="main_description">
                   <?= $description; ?>
                 </div>
             </div>
-            <div class="half_column">                
-                <?php echo do_shortcode('[contact-form-7 id="15" title="Контактная форма 1"]')?>
+            <div class="half_column">      
+              <?php get_template_part( 'template-parts/form', 'vertical' ); ?>
             </div>
           </div>            
         </div>
@@ -159,6 +159,12 @@
             <?php endforeach; ?>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <?php get_template_part( 'template-parts/form', 'horizontal' ); ?>
       </div>
     </section>
 

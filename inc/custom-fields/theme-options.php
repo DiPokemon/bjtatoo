@@ -10,18 +10,28 @@ $basic_options_container = Container::make( 'theme_options', __( 'Theme options'
             ->set_attribute( 'placeholder', '+7 (***) ***-**-**' )            
             ->set_width(33),
         Field::make( 'text', 'crb_email', __( 'E-mail', 'tattoo_theme' ) )
+            ->set_attribute( 'placeholder', 'example@example.com' )  
             ->set_width(33),
         Field::make( 'text', 'crb_second_phone', __( 'Доп. телефон', 'tattoo_theme' ) )
+            ->set_attribute( 'placeholder', '+7 (***) ***-**-**' ) 
             ->set_width(33),
         Field::make( 'text', 'crb_vk', __( 'Вконтакте', 'tattoo_theme' ) )
+            ->set_attribute( 'placeholder', 'vk.com/example' )
             ->set_width(33),
         Field::make( 'text', 'crb_tg', __( 'Телеграм', 'tattoo_theme' ) )
+            ->set_attribute( 'placeholder', 'example' )
             ->set_width(33),
         Field::make( 'text', 'crb_wa', __( 'WhatsApp', 'tattoo_theme' ) )
+            ->set_attribute( 'placeholder', '7**********' )
             ->set_width(33),
         Field::make( 'text', 'crb_inst', __( 'Инстаграм', 'tattoo_theme' ) )
+            ->set_attribute( 'placeholder', 'instagram.com/example' )
             ->set_width(33),
         Field::make( 'text', 'crb_fb', __( 'Фейсбук', 'tattoo_theme' ) )
+            ->set_attribute( 'placeholder', 'facebook.com/example' )
+            ->set_width(33),
+        Field::make( 'text', 'crb_cf7', __( 'Контактная форма', 'tattoo_theme' ) )
+            ->set_attribute( 'placeholder', '[contact-form-7 id="1" title="Контактная форма 1"]' )  
             ->set_width(33),
     ) )
     ->add_tab( __( 'Адрес', 'tattoo_theme' ), array(
