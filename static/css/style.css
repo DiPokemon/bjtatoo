@@ -173,6 +173,129 @@ a:active {
   background-color: transparent;
 }
 
+#map ymaps[class*=-ground-pane] {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+#map .popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  display: none;
+  max-width: 350px;
+  text-align: left;
+  white-space: normal;
+  background-color: #fff;
+  border: 1px solid #bb0303;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+}
+#map .popover.top {
+  margin-top: -10px;
+}
+#map .popover.top .arrow {
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-color: #bb0303;
+  border-bottom-width: 0;
+}
+#map .popover.top .arrow:after {
+  bottom: 1px;
+  margin-left: -10px;
+  border-top-color: #fff;
+  border-bottom-width: 0;
+}
+#map .popover.right {
+  margin-left: 10px;
+}
+#map .popover.right .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-right-color: #bb0303;
+  border-left-width: 0;
+}
+#map .popover.right .arrow:after {
+  bottom: -10px;
+  left: 1px;
+  border-right-color: #fff;
+  border-left-width: 0;
+}
+#map .popover.bottom {
+  margin-top: 10px;
+}
+#map .popover.bottom .arrow {
+  top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-bottom-color: #bb0303;
+  border-top-width: 0;
+}
+#map .popover.bottom .arrow:after {
+  top: 1px;
+  margin-left: -10px;
+  border-bottom-color: #fff;
+  border-top-width: 0;
+}
+#map .popover.left {
+  margin-left: -10px;
+}
+#map .popover.left .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-left-color: #bb0303;
+  border-right-width: 0;
+}
+#map .popover.left .arrow:after {
+  right: 1px;
+  bottom: -10px;
+  border-left-color: #fff;
+  border-right-width: 0;
+}
+#map .popover .popover-title {
+  padding: 8px 14px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  background-color: #000;
+  color: #fff;
+  font-family: "TTFirsNeue";
+  border-bottom: 1px solid #fff;
+  border-radius: 5px 5px 0 0;
+}
+#map .popover .popover-title:empty {
+  display: none;
+}
+#map .popover .popover-content {
+  padding: 9px;
+  font-size: 16px;
+}
+#map .popover .arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 11px;
+}
+#map .popover .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 10px;
+  content: "";
+}
+
 .container {
   width: 90vw;
   max-width: 1138px;
@@ -712,7 +835,19 @@ a:active {
   padding: 10px 10px 0px 10px;
 }
 .testimonial .testimonial_organization, .testimonial .testimonial_rating {
-  display: none;
+  display: none !important;
+}
+
+.map_wrapper {
+  height: 500px;
+}
+.map_wrapper .popover {
+  display: block;
+}
+.map_wrapper .popover .close {
+  position: absolute;
+  right: 5px;
+  top: 1px;
 }
 
 .page_header {

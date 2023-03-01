@@ -133,6 +133,17 @@
 
     <section>
       <div class="container">
+        <div class="half_column map_wrapper" id="map">
+          
+        </div>
+        <div class="half_column">
+
+        </div>
+      </div>      
+    </section>
+
+    <section>
+      <div class="container">
         <?php get_template_part( 'template-parts/form', 'horizontal' ); ?>
       </div>
     </section>
