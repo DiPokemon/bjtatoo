@@ -528,19 +528,22 @@
   }
 }
 
-.map_wrapper{
-  height:500px;
-
-  .popover {
-    display: block;
-
-    .close {
-      position: absolute;
-      right: 5px;
-      top: 1px;
+.map_container{  
+  .map_wrapper{
+    height:500px;
+  
+    .popover {
+      //display: block;
+  
+      .close {
+        position: absolute;
+        right: 5px;
+        top: 1px;
+      }
     }
   }
 }
+
 
 .page_header {
   padding: 20px 0;

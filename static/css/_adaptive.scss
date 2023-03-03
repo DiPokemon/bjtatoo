@@ -193,6 +193,28 @@
 }
 
 @media(max-width: 507px){
+    .map_container{
+        width:100vw;
+       
+        .map_wrapper{
+            height: 300px
+        }
+
+        #map{
+
+            .popover{
+
+                max-width:300px;
+                .popover-title{
+                    max-width:298px;
+                }
+                .popover-content{
+                    max-width:300px;
+                    font-size: 14px;
+                }
+            }            
+        }
+    }
     footer{
         .footer_menu_list{
             gap:5px;

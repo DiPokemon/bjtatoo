@@ -177,12 +177,17 @@ a:active {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
+#map ymaps[class*=-inner-panes] {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 8px -5px #000;
+          box-shadow: 0px 0px 8px -5px #000;
+}
 #map .popover {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1010;
-  display: none;
+  display: block;
   max-width: 350px;
   text-align: left;
   white-space: normal;
@@ -838,13 +843,10 @@ a:active {
   display: none !important;
 }
 
-.map_wrapper {
+.map_container .map_wrapper {
   height: 500px;
 }
-.map_wrapper .popover {
-  display: block;
-}
-.map_wrapper .popover .close {
+.map_container .map_wrapper .popover .close {
   position: absolute;
   right: 5px;
   top: 1px;
@@ -1305,6 +1307,22 @@ footer .footer_container .footer_contacts .footer_contacts_bottom i {
   }
 }
 @media (max-width: 507px) {
+  .map_container {
+    width: 100vw;
+  }
+  .map_container .map_wrapper {
+    height: 300px;
+  }
+  .map_container #map .popover {
+    max-width: 300px;
+  }
+  .map_container #map .popover .popover-title {
+    max-width: 298px;
+  }
+  .map_container #map .popover .popover-content {
+    max-width: 300px;
+    font-size: 14px;
+  }
   footer .footer_menu_list {
     gap: 5px;
     -ms-flex-wrap: wrap;

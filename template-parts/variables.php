@@ -1,7 +1,7 @@
 <?php
   $title = carbon_get_theme_option( 'crb_main_title' );
   $description = carbon_get_theme_option( 'crb_main_description' );
-
+  $org_name = carbon_get_theme_option( 'crb_org_name' );
   $contacts_main_phone = carbon_get_theme_option( 'crb_main_phone' );
   $contacts_add_phone = carbon_get_theme_option( 'crb_second_phone' );
   $contacts_mail = carbon_get_theme_option( 'crb_email' );
@@ -15,6 +15,8 @@
   $address_street = carbon_get_theme_option( 'crb_address_street' );
   $address_building = carbon_get_theme_option( 'crb_address_build' );
   $address_zipcode = carbon_get_theme_option( 'crb_address_index' );
+  $address_latitude = carbon_get_theme_option( 'crb_address_latitude' );
+  $address_longitude = carbon_get_theme_option( 'crb_address_longitude' );
 
   $left_icons = carbon_get_theme_option( 'crb_main_icons_left' );
   $right_icons = carbon_get_theme_option( 'crb_main_icons_right' );

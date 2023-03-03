@@ -1,20 +1,21 @@
 
 #map{
-    // ymaps[class*="-controls-pane"],
-    // ymaps[class*="-map-copyrights-promo"]{
-    //     display: none;
-    // }    
 
     ymaps[class*="-ground-pane"]{
         filter: grayscale(1);
     }    
 
+    ymaps[class*="-inner-panes"]{
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px -5px $black;
+    } 
+    
     .popover {
         position: absolute;
         top: 0;
         left: 0;
         z-index: 1010;
-        display: none;
+        display: block;
         max-width: 350px;
         text-align: left;
         white-space: normal;

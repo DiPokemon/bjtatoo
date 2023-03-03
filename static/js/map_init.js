@@ -1,12 +1,21 @@
 ymaps.ready(init);
 
+let map = document.getElementById('map');
+let mapAddress = map.dataset.address;
+let mapName = map.dataset.name;
+let mapPhone = map.dataset.phone;
+let mapLatitude = map.dataset.latitude;
+let mapLongitude = map.dataset.longitude;
+
 function init() {
     var myMap = new ymaps.Map("map", {
-        center: [47.251789241271524, 39.71347766137691],
-        zoom: 17
+        center: [mapLatitude,mapLongitude],
+        zoom: 17,
+        controls: []
+    }, {
+        suppressMapOpenBlock: true
     });        
 
-    // Создание макета балуна на основе Twitter Bootstrap.
     MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
             '<div class="popover top">' +
             '<a class="close" href="#">&times;</a>' +
@@ -62,17 +71,15 @@ function init() {
             }
         }),
 
-    // Создание вложенного макета содержимого балуна.
     MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
         '<h3 class="popover-title">$[properties.balloonHeader]</h3>' +
             '<div class="popover-content">$[properties.balloonContent]</div>'
     ),
 
-    // Создание метки с пользовательским макетом балуна.
     myPlacemark = window.myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        balloonHeader: 'Black Jack',
-        balloonContent: '<b>Телефон: </b><a href="tel:+79185802017">+7 918 580 20 17</a><br><b>Адрес: </b>Ростов-на-Дону, проспект Михаила Нагибина, 27',
-        iconCaption: 'Black Jack'
+        balloonHeader: mapName,
+        balloonContent: '<b>Телефон: </b><a href="tel:'+mapPhone+'">'+mapPhone+'</a><br><b>Адрес: </b>'+mapAddress,
+        iconCaption: mapName
     }, {
         balloonShadow: false,
         balloonLayout: MyBalloonLayout,

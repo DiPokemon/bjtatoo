@@ -4,8 +4,9 @@ use Carbon_Fields\Field;
 
 // Default options page
 $basic_options_container = Container::make( 'theme_options', __( 'Theme options', 'tattoo_theme' ) )
-    ->set_icon( 'dashicons-welcome-learn-more' )
+    ->set_icon( 'dashicons-welcome-learn-more' )    
     ->add_tab( __( 'Контакты', 'tattoo_theme' ), array(
+        Field::make( 'text', 'crb_org_name', __('Название организации', 'tattoo_theme')),
         Field::make( 'text', 'crb_main_phone', __( 'Основной телефон', 'tattoo_theme' ) )
             ->set_attribute( 'placeholder', '+7 (***) ***-**-**' )            
             ->set_width(33),
@@ -43,6 +44,8 @@ $basic_options_container = Container::make( 'theme_options', __( 'Theme options'
             ->set_width(50),
         Field::make( 'text', 'crb_address_index', __( 'Индекс', 'tattoo_theme' ) )
             ->set_width(50),
+        Field::make( 'text', 'crb_address_latitude', __( 'Широта (для карты)', 'tattoo_theme' ) ),
+        Field::make( 'text', 'crb_address_longitude', __( 'Долгота (для карты)', 'tattoo_theme' ) ),          
     ) );
 
 Container::make( 'theme_options', __( 'Main page', 'tattoo_theme' ) )
