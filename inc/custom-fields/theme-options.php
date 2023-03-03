@@ -44,8 +44,10 @@ $basic_options_container = Container::make( 'theme_options', __( 'Theme options'
             ->set_width(50),
         Field::make( 'text', 'crb_address_index', __( 'Индекс', 'tattoo_theme' ) )
             ->set_width(50),
-        Field::make( 'text', 'crb_address_latitude', __( 'Широта (для карты)', 'tattoo_theme' ) ),
-        Field::make( 'text', 'crb_address_longitude', __( 'Долгота (для карты)', 'tattoo_theme' ) ),          
+        Field::make( 'text', 'crb_address_latitude', __( 'Широта (для карты)', 'tattoo_theme' ) )
+            ->set_width(50),
+        Field::make( 'text', 'crb_address_longitude', __( 'Долгота (для карты)', 'tattoo_theme' ) )
+            ->set_width(50),
     ) );
 
 Container::make( 'theme_options', __( 'Main page', 'tattoo_theme' ) )
