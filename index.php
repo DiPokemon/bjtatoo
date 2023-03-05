@@ -34,15 +34,21 @@
         </div>
     </section>
 
+    <?php get_template_part( 'template-parts/block', 'portfolio' ); ?>
+
     <section>
-      <div class="container">          
+      <div class="container">
         <div class="slider_wrapper">
-          <div class="portfolio_slider">
-            <?php foreach( $portfolio as $portfolio_item ) : ?>
-                <img src="<?= $portfolio_item['crb_portfolio_img']; ?>" alt="<?= $portfolio_item['crb_portfolio_alt']; ?>" title="<?= $portfolio_item['crb_portfolio_title']; ?>">
+          <div class="advantages_block">
+            <?php foreach( $advantages as $advantage ) : ?>
+              <div class="advantages_item">
+                <div class="advantage_digit"><?= $advantage['crb_adv_digit']; ?></div>
+                <div class="advantage_text"><?= $advantage['crb_adv_text']; ?></div>
+              </div>
             <?php endforeach; ?>
+
           </div>
-        </div>        
+        </div>
       </div>
     </section>
 
@@ -131,10 +137,8 @@
       </div>
     </section>
     
-    <section>
-            
-    </section>
-      <?php get_template_part( 'template-parts/block', 'map' ); ?>
+    <?php get_template_part( 'template-parts/block', 'map' ); ?>
+
     <section>
       <div class="container">
         <?php get_template_part( 'template-parts/form', 'horizontal' ); ?>

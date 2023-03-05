@@ -347,6 +347,22 @@
   }
 }
 
+.advantages_block{
+
+  .advantages_item{
+    text-align: center;
+    .advantage_digit {
+      font-size: 40px;
+      font-weight: 500;
+      font-family: $first_neue;
+    }
+    .advantage_text{
+      font-size: 20px;
+    }
+  }
+  
+}
+
 .portfolio_slider{
 
   .slick-track {
@@ -721,6 +737,33 @@
       height: 300px;
       object-fit: cover;
       margin-bottom: 20px;
+      box-shadow: 0px 0px 8px -5px $black;
+    }
+  }
+}
+
+.masonry_portfolio{  
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .grid_sizer,
+  .grid_item {
+    width: 33%;
+  }
+
+  .grid_item {
+    float: left;
+    margin-bottom: 10px;
+    padding-right: 10px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      border-radius: 5px;
       box-shadow: 0px 0px 8px -5px $black;
     }
   }

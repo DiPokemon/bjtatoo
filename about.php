@@ -24,15 +24,5 @@
         </div>
     </section>
 
-    <section>
-      <div class="container">          
-        <div class="slider_wrapper">
-          <div class="portfolio_slider">
-            <?php foreach( $portfolio as $portfolio_item ) : ?>
-                <img src="<?= $portfolio_item['crb_portfolio_img']; ?>" alt="<?= $portfolio_item['crb_portfolio_alt']; ?>" title="<?= $portfolio_item['crb_portfolio_title']; ?>">
-            <?php endforeach; ?>
-          </div>
-        </div>        
-      </div>
-    </section>
+    <?php get_template_part( 'template-parts/block', 'portfolio' ); ?>
 <?php get_footer(); ?>

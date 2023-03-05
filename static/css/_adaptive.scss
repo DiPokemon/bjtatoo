@@ -190,6 +190,20 @@
     .posts_grid{
         grid-template-columns: repeat(2, 50%);
     }
+    
+    .masonry_portfolio{       
+      
+        .grid_sizer,
+        .grid_item {
+          width: 50%;
+        }
+      
+        .grid_item {
+          float: left;
+          margin-bottom: 5px;
+          padding-right: 5px;
+        }
+      }
 }
 
 @media(max-width: 507px){

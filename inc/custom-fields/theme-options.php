@@ -94,6 +94,14 @@ Container::make( 'theme_options', __( 'Main page', 'tattoo_theme' ) )
                     ->set_width(33),
                 Field::make( 'text', 'crb_portfolio_title', __('Title', 'tattoo_theme') )
                     ->set_width(33),
+            ) ),
+        Field::make( 'complex', 'crb_advantages', __( 'Преимущества', 'tattoo_theme' ))
+            ->add_fields( array(
+                Field::make( 'text', 'crb_adv_digit', __('Число', 'tattoo_theme') )
+                    ->set_attribute('type', 'number')                    
+                    ->set_width(33),
+                Field::make( 'text', 'crb_adv_text', __('Текст', 'tattoo_theme') )
+                    ->set_width(67),
             ) )
     ) )    
 

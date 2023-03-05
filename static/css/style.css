@@ -663,6 +663,18 @@ a:active {
   padding: 10px;
 }
 
+.advantages_block .advantages_item {
+  text-align: center;
+}
+.advantages_block .advantages_item .advantage_digit {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "TTFirsNeue";
+}
+.advantages_block .advantages_item .advantage_text {
+  font-size: 20px;
+}
+
 .portfolio_slider .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1040,6 +1052,28 @@ a:active {
           box-shadow: 0px 0px 8px -5px #000;
 }
 
+.masonry_portfolio:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.masonry_portfolio .grid_sizer,
+.masonry_portfolio .grid_item {
+  width: 33%;
+}
+.masonry_portfolio .grid_item {
+  float: left;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+.masonry_portfolio .grid_item img {
+  display: block;
+  max-width: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 8px -5px #000;
+          box-shadow: 0px 0px 8px -5px #000;
+}
+
 footer {
   border-top: 1px solid rgba(221, 221, 221, 0.4705882353);
   padding: 20px 0;
@@ -1304,6 +1338,15 @@ footer .footer_container .footer_contacts .footer_contacts_bottom i {
   }
   .posts_grid {
     grid-template-columns: repeat(2, 50%);
+  }
+  .masonry_portfolio .grid_sizer,
+  .masonry_portfolio .grid_item {
+    width: 50%;
+  }
+  .masonry_portfolio .grid_item {
+    float: left;
+    margin-bottom: 5px;
+    padding-right: 5px;
   }
 }
 @media (max-width: 507px) {

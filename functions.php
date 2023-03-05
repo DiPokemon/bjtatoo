@@ -9,6 +9,7 @@ function crb_load() {
 add_action( 'carbon_fields_register_fields', 'bjtattoo_register_custom_fields' );
 function bjtattoo_register_custom_fields() {
 	require get_template_directory() . '/inc/custom-fields/theme-options.php';
+	require get_template_directory() . '/inc/custom-fields/post-meta.php';
 }
 
 //включаем поддержку кастомного лога из настроек
@@ -70,6 +71,8 @@ function load_scripts()
   wp_enqueue_script('inits', get_template_directory_uri().'/static/js/inits.js', array(), NULL, true);
   wp_enqueue_script('yamap_api', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU', array(), NULL, true);  
   wp_enqueue_script('map_init', get_template_directory_uri().'/static/js/map_init.js', array('yamap_api'), NULL, true); 
+  wp_enqueue_script('spincrement', get_template_directory_uri().'/static/js/spincrement.js', array(), NULL, true); 
+  wp_enqueue_script('masonry', get_template_directory_uri().'/static/js/masonry.js', array(), NULL, true); 
 } 
 add_action('wp_enqueue_scripts', 'load_scripts', 10);
 

@@ -59,4 +59,6 @@
     </div>
 </section>
 
+<?php get_template_part( 'template-parts/block', 'portfolio' ); ?>
+
 <?php get_footer(); ?>
