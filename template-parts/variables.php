@@ -2,11 +2,16 @@
   $title = carbon_get_theme_option( 'crb_main_title' );
   $description = carbon_get_theme_option( 'crb_main_description' );
   $org_name = carbon_get_theme_option( 'crb_org_name' );
-  $contacts_main_phone = carbon_get_theme_option( 'crb_main_phone' );
-  $contacts_add_phone = carbon_get_theme_option( 'crb_second_phone' );
+
+  $contacts_main_phone_front = phone_front(carbon_get_theme_option( 'crb_main_phone' ));
+  $contacts_add_phone_front = phone_front(carbon_get_theme_option( 'crb_second_phone' ));
+  $contacts_main_phone_href = phone_href(carbon_get_theme_option( 'crb_main_phone' ));
+  $contacts_add_phone_href = phone_href(carbon_get_theme_option( 'crb_second_phone' ));
+  
+
   $contacts_mail = carbon_get_theme_option( 'crb_email' );
   $contacts_vk = carbon_get_theme_option( 'crb_vk' );
-  $contacts_wa = carbon_get_theme_option( 'crb_wa' );
+  $contacts_wa = phone_wa(carbon_get_theme_option( 'crb_wa' ));
   $contacts_tg = carbon_get_theme_option( 'crb_tg' );
   $contacts_inst = carbon_get_theme_option( 'crb_inst' );
   $contacts_fb = carbon_get_theme_option( 'crb_fb' );

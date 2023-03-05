@@ -3,7 +3,8 @@ ymaps.ready(init);
 let map = document.getElementById('map');
 let mapAddress = map.dataset.address;
 let mapName = map.dataset.name;
-let mapPhone = map.dataset.phone;
+let mapPhoneFront = map.dataset.phonefront;
+let mapPhoneHref = map.dataset.phonehref;
 let mapLatitude = map.dataset.latitude;
 let mapLongitude = map.dataset.longitude;
 
@@ -78,7 +79,7 @@ function init() {
 
     myPlacemark = window.myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
         balloonHeader: mapName,
-        balloonContent: '<b>Телефон: </b><a href="tel:'+mapPhone+'">'+mapPhone+'</a><br><b>Адрес: </b>'+mapAddress,
+        balloonContent: '<b>Телефон: </b><a href="tel:'+mapPhoneHref+'">'+mapPhoneFront+'</a><br><b>Адрес: </b>'+mapAddress,
         iconCaption: mapName
     }, {
         balloonShadow: false,

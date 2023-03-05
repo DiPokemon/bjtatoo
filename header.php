@@ -14,7 +14,7 @@
             <div class="d_flex header_container">
                 <div class="header_wrapper container">
                     <div class="logo_img"><?php the_custom_logo() ?></div>
-                    <div class="header_phone"><a href="tel:<?= $contacts_main_phone ?>" class="header_phone-link"><?= $contacts_main_phone ?></a></div>
+                    <div class="header_phone"><a href="tel:<?= $contacts_main_phone_href ?>" class="header_phone-link"><?= $contacts_main_phone_front ?></a></div>
                     <div class="header_burger">
                         <span></span>
                     </div>
