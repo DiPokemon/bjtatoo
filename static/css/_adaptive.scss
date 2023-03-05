@@ -1,3 +1,9 @@
+// @media(max-width:1024px){
+//     .main_frame{
+//         height: auto;
+//     }
+// }
+
 @media(max-width:900px){
     .header_container{
         padding: 5px 10px;
@@ -190,7 +196,7 @@
     .posts_grid{
         grid-template-columns: repeat(2, 50%);
     }
-    
+
     .masonry_portfolio{       
       
         .grid_sizer,
@@ -238,18 +244,15 @@
         }       
     }
 
-    .services_tabs{
-        .tabs__links{
-            padding:10px 5px;
-    
-            a{
+    .section_tabs{
+        .tabs_head{
+            .tabs_caption{
                 padding: 3px 5px;
-    
                 .text_title{
                     font-size: 18px;
                 }
-            }            
-        }
+            }
+        }        
     }
     
 }
@@ -259,16 +262,14 @@
         font-size: 16px
     }
 
-    .services_tabs{
-        .tabs__links{            
-            padding:10px 2px;
-
-            a{   
+    .section_tabs{
+        .tabs_head{
+            .tabs_caption{
                 .text_title{
                     font-size: 16px;
                 }
-            }            
-        }
+            }
+        }        
     }
 
     .posts_grid{
