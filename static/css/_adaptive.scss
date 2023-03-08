@@ -18,6 +18,13 @@
             font-size: 18px;
         }
     }
+
+    .map_container{
+
+        .map_wrapper{
+            height: 400px
+        }
+    }
 }
 
 @media(max-width: 768px){
@@ -157,8 +164,20 @@
             .sidebar_contacts{
                 align-items: flex-start;
             }
-        }
+        }        
+    }
+
+    .map_container{ 
+        flex-direction: column;
+
+        .contacts_block{            
+            gap:10px;
+            align-items: flex-start;
         
+            .address {
+              text-align: start;
+            }
+          }
     }
 
     .posts_grid{
