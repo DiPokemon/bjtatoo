@@ -671,20 +671,20 @@
         }
       }
 
-      .sidebar_socials{
-        display: flex;
-        gap: 10px;
+      // .sidebar_socials{
+      //   display: flex;
+      //   gap: 10px;
   
-        i{
-          color: $red;
-          font-size: 20px;
+      //   i{
+      //     color: $red;
+      //     font-size: 20px;
 
-          &:hover{
-            font-size: 22px;
-          }
-        }
+      //     &:hover{
+      //       font-size: 22px;
+      //     }
+      //   }
         
-      }
+      // }
     }    
   }
 }
@@ -769,6 +769,18 @@
   }
 }
 
+.socials_links{  
+    display: flex;
+    gap: 10px;
+
+    i{
+      color: $red;
+      font-size: 20px;
+    }
+    
+  }
+
+
 footer{
   border-top: 1px solid $gray;
   padding: 20px 0;  
@@ -813,18 +825,7 @@ footer{
           color: $black;
           font-size: 12px;
         }
-      }
-
-      .footer_contacts_bottom{
-        display: flex;
-        gap: 10px;
-
-        i{
-          color: $red;
-          font-size: 20px;
-        }
-        
-      }
+      }      
     }
   }
 }

@@ -10,8 +10,6 @@
 
     <div class="sidebar_contacts"> 
         <?php if ($contacts_main_phone) :?><a class="sidebar_phone" href="tel:<?= $contacts_main_phone ?>"><?= $contacts_main_phone ?></a> <?php endif; ?>
-        <div class="sidebar_socials">
-            <?php get_template_part( 'template-parts/socials' ); ?>
-        </div>                        
+        <?php get_template_part( 'template-parts/socials' ); ?>                                
     </div>
 </div>
