@@ -1,6 +1,11 @@
 <?php get_header(); ?>
 <?php include 'template-parts/variables.php' ?>
-<?php get_template_part( 'template-parts/block', 'pageheader' ); ?>
+<section>
+    <div class="container page_header">
+        <h1 class="page_title"><?php single_cat_title(); ?></h1>
+        <?php if (function_exists('breadcrumbs')) breadcrumbs(); ?> 
+    </div>
+</section>
 
 <section>
     <div class="container">
