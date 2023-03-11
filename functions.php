@@ -12,6 +12,12 @@ function bjtattoo_register_custom_fields() {
 	require get_template_directory() . '/inc/custom-fields/post-meta.php';
 }
 
+//обреазние excerpt по количеству слов
+function сustom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 //включаем поддержку кастомного лога из настроек
 add_theme_support( 'custom-logo' );
 
