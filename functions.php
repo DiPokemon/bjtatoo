@@ -14,7 +14,7 @@ function bjtattoo_register_custom_fields() {
 
 //обреазние excerpt по количеству слов
 function сustom_excerpt_length( $length ) {
-    return 20;
+    return 10;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
