@@ -1391,6 +1391,9 @@ footer .footer_container .footer_contacts .footer_contacts_top a {
   .map_container .map_wrapper {
     height: 300px;
   }
+  .map_container .contacts_block {
+    padding: 0 10px;
+  }
   .map_container #map .popover {
     max-width: 300px;
   }
