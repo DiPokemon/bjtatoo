@@ -747,6 +747,7 @@ a:active, button:active {
 .faq {
   border: 1px solid rgba(221, 221, 221, 0.4705882353);
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 .faq:hover {
   border-color: #bb0303;
@@ -832,6 +833,7 @@ a:active, button:active {
   -o-object-position: center top;
      object-position: center top;
   height: 100%;
+  aspect-ratio: 1/1;
 }
 .testimonial .testimonial_header .testimonial_author_name {
   display: -webkit-box;

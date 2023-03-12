@@ -432,6 +432,7 @@
 .faq {
   border:1px solid $gray;
   border-radius: 5px;
+  margin-bottom: 10px;
   
   &:hover{
     border-color: $red;
@@ -519,6 +520,7 @@
       object-fit: cover;
       object-position: center top;
       height: 100%;
+      aspect-ratio: 1/1;
     }
 
     .testimonial_author_name{
