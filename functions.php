@@ -79,6 +79,7 @@ function load_scripts()
   wp_enqueue_script('map_init', get_template_directory_uri().'/static/js/map_init.js', array('yamap_api'), NULL, true); 
   wp_enqueue_script('spincrement', get_template_directory_uri().'/static/js/spincrement.js', array(), NULL, true); 
   wp_enqueue_script('masonry', get_template_directory_uri().'/static/js/masonry.js', array(), NULL, true); 
+  wp_enqueue_script('maskedinput', get_template_directory_uri().'/static/js/maskedinput.js', array(), NULL, true); 
 } 
 add_action('wp_enqueue_scripts', 'load_scripts', 10);
 

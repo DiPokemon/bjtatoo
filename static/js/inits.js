@@ -141,6 +141,11 @@ $(document).ready(function () {
     itemSelector: '.grid_item',
     columnWidth: '.grid_sizer',
   });  
+
+  jQuery( function($){
+    $(".cf_tel").mask("+7 (999)-999-99-99");
+  });
+
   
 });
 

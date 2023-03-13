@@ -24,7 +24,7 @@
                 ?>  
               <div class="footer_contacts">
                 <div class="footer_contacts_top">
-                  <a href="tel:<?= $contacts_main_phone ?>"><?= $contacts_main_phone ?></a>
+                  <a href="<?= $contacts_main_phone_href ?>"><?= $contacts_main_phone_front ?></a>
                   <a href="mailto:<?= $contacts_mail ?>"><?= $contacts_mail ?></a>
                 </div>
                 <div class="footer_contacts_bottom">                  
