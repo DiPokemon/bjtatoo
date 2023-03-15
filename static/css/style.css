@@ -1167,6 +1167,10 @@ footer .footer_container .footer_contacts .footer_contacts_top a {
   font-size: 12px;
 }
 
+.adv_block #yandex_rtb_R-A-2254384-2 {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .header_container {
     padding: 5px 10px;
@@ -1362,6 +1366,12 @@ footer .footer_container .footer_contacts .footer_contacts_top a {
         -ms-flex-order: 1;
             order: 1;
     padding-bottom: 20px;
+  }
+  .adv_block #yandex_rtb_R-A-2254384-2 {
+    display: block;
+  }
+  .adv_block #yandex_rtb_R-A-2254384-1 {
+    display: none;
   }
 }
 @media (max-width: 550px) {

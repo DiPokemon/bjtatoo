@@ -80,6 +80,7 @@ function load_scripts()
   wp_enqueue_script('spincrement', get_template_directory_uri().'/static/js/spincrement.js', array('jquery'), NULL, true); 
   wp_enqueue_script('masonry', get_template_directory_uri().'/static/js/masonry.js', array('jquery'), NULL, true); 
   wp_enqueue_script('maskedinput', get_template_directory_uri().'/static/js/maskedinput.js', array('jquery'), NULL, true); 
+  wp_enqueue_script('yandexadv', 'https://yandex.ru/ads/system/context.js', array('jquery'), NULL, false); 
 } 
 add_action('wp_enqueue_scripts', 'load_scripts', 10);
 
