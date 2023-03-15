@@ -1,4 +1,6 @@
 <?php
+  $head_code = carbon_get_theme_option( 'crb_head_code' );
+  $footer_code = carbon_get_theme_option( 'crb_footer_code' );
   $title = carbon_get_theme_option( 'crb_main_title' );
   $description = carbon_get_theme_option( 'crb_main_description' );
   $org_name = carbon_get_theme_option( 'crb_org_name' );

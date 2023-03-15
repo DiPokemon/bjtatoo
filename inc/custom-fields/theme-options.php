@@ -5,6 +5,10 @@ use Carbon_Fields\Field;
 // Default options page
 $basic_options_container = Container::make( 'theme_options', __( 'Theme options', 'tattoo_theme' ) )
     ->set_icon( 'dashicons-welcome-learn-more' )    
+    ->add_tab( __( 'Пользовательский код', 'tattoo_theme' ), array(
+        Field::make( 'header_scripts', 'crb_head_code', __('Код в HEAD', 'tattoo_theme')),
+        Field::make( 'footer_scripts', 'crb_footer_code', __('Код в FOOTER', 'tattoo_theme')),               
+    ) )
     ->add_tab( __( 'Контакты', 'tattoo_theme' ), array(
         Field::make( 'text', 'crb_org_name', __('Название организации', 'tattoo_theme')),
         Field::make( 'text', 'crb_main_phone', __( 'Основной телефон', 'tattoo_theme' ) )
