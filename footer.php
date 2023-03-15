@@ -1,3 +1,4 @@
+        <?php get_template_part( 'template-parts/block', 'adv' ); ?>
         </main>
         <footer>
         <?php include 'template-parts/variables.php' ?>

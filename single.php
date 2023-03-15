@@ -24,4 +24,5 @@
 <?php get_template_part( 'template-parts/block', 'portfolio' ); ?>
 
 <?php endwhile; ?>
+
 <?php get_footer(); ?>
