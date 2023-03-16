@@ -34,7 +34,7 @@
 
                     <a href="<?php the_permalink(); ?>" class="post_item">
                         <div class="post_item_top">
-                            <img class="post_img" loading="lazy" src="<?= $post_thumbnail_url ?>" alt="<?php the_title(); ?>">
+                            <img loading="lazy" class="post_img" loading="lazy" src="<?= $post_thumbnail_url ?>" alt="<?php the_title(); ?>">
                             <h2 class="post_title"><?php the_title(); ?></h2>
                         </div>
                         <div class="post_desc"><?php the_excerpt(); ?></div>

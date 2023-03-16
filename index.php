@@ -9,12 +9,12 @@
         <div class="icons_bg">
             <div id="left_side_icons" class="left_side">
               <?php foreach( $left_icons as $icon ) : ?>
-                <img class="float_icon" src="<?= $icon['crb_main_icon_img']; ?>" alt="<?= $icon['crb_main_icon_alt']; ?>" title="<?= $icon['crb_main_icon_title']; ?>">
+                <img loading="lazy" class="float_icon" src="<?= $icon['crb_main_icon_img']; ?>" alt="<?= $icon['crb_main_icon_alt']; ?>" title="<?= $icon['crb_main_icon_title']; ?>">
               <?php endforeach; ?>
             </div>
             <div id="right_side_icons" class="right_side">
               <?php foreach( $right_icons as $icon ) : ?>
-                <img class="float_icon" src="<?= $icon['crb_main_icon_img']; ?>" alt="<?= $icon['crb_main_icon_alt']; ?>" title="<?= $icon['crb_main_icon_title']; ?>">
+                <img loading="lazy" class="float_icon" src="<?= $icon['crb_main_icon_img']; ?>" alt="<?= $icon['crb_main_icon_alt']; ?>" title="<?= $icon['crb_main_icon_title']; ?>">
               <?php endforeach; ?>                
             </div>
         </div>
@@ -101,7 +101,7 @@
             <?php foreach($testimonial_items as $i => $testimonial): ?>
               <div id="testimonial_<?= $i; ?>" class="testimonial" itemscope itemtype="https://schema.org/Review">
                 <div class="testimonial_header" itemprop="author" itemscope itemtype="https://schema.org/Person">                  
-                  <img height="100px" width="100px" class="testimonial_author_img" src="<?= $testimonial['crb_testimonial_img']; ?>" alt="Отзыв о тату-студии Black Jack от <?= $testimonial['crb_testimonial_name']; ?> <?= $testimonial['crb_testimonial_second_name']; ?>">
+                  <img loading="lazy" height="100px" width="100px" class="testimonial_author_img" src="<?= $testimonial['crb_testimonial_img']; ?>" alt="Отзыв о тату-студии Black Jack от <?= $testimonial['crb_testimonial_name']; ?> <?= $testimonial['crb_testimonial_second_name']; ?>">
                   <div class="testimonial_author_name">
                     <span itemprop="name"><?= $testimonial['crb_testimonial_name']; ?></span>
                     <?php if($testimonial['crb_testimonial_second_name']):?>
@@ -139,10 +139,10 @@
     
     <?php get_template_part( 'template-parts/block', 'map' ); ?>
 
-    <section>
+    <!-- <section>
       <div class="container">
         <?php get_template_part( 'template-parts/form', 'horizontal' ); ?>
       </div>
-    </section>
+    </section> -->
 
 <?php get_footer(); ?>
