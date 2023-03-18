@@ -1172,6 +1172,13 @@ a:active, button:active {
   font-size: 20px;
 }
 
+.banner_404 {
+  text-align: center;
+  font-size: 200px;
+  font-family: "TTFirsNeue";
+  color: #bb0303;
+}
+
 footer {
   border-top: 1px solid rgba(221, 221, 221, 0.4705882353);
   padding: 20px 0;
