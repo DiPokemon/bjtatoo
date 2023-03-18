@@ -8,6 +8,9 @@
 <?php get_template_part( 'template-parts/block', 'pageheader' ); ?>
 <section>
     <div class="container">
+        <div class="banner_404">
+            404
+        </div>
         <div class="text_404">
             Извините, страница не найдена, но Вы можете найти посмотреть, что у нас есть или оставить заявку!
         </div>
