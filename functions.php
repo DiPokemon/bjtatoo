@@ -392,3 +392,12 @@ function phone_wa($phone) {
 	); 
 	return $res;
 }
+
+function theme_slug_filter_wp_title( $title ) {
+    if ( is_404() ) {
+        $title = 'Страница не найдена - Тату-студия "Black Jack"';
+    }
+    return $title;
+}
+
+add_filter( 'wp_title', 'theme_slug_filter_wp_title' );
