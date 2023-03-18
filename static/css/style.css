@@ -1530,4 +1530,7 @@ footer .footer_container .footer_contacts .footer_contacts_top a {
   .posts_grid {
     grid-template-columns: 100%;
   }
+  .text_404 {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
