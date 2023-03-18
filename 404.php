@@ -10,7 +10,7 @@
     <div class="container">
         <div class="banner_404">404</div>
         <div class="text_404">
-            Извините, страница не найдена &#9785; <br>Вы можете найти посмотреть, что у нас есть или оставить заявку!
+            <?= $text_404 ?>
         </div>
         <div class="page_content_wrapper">
             <div class="half_column">

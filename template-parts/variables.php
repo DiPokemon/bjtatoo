@@ -34,4 +34,5 @@
   $cf7 = carbon_get_theme_option( 'crb_cf7' );
 
   $portfolio_page_items = carbon_get_the_post_meta( 'crb_portfolio_page' );
+  $text_404 = carbon_get_theme_option( 'crb_text_404' );
 ?>
