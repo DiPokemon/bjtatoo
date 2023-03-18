@@ -8,8 +8,7 @@ $basic_options_container = Container::make( 'theme_options', __( 'Theme options'
     ->add_tab( __( 'Доп. код и тексты', 'tattoo_theme' ), array(
         Field::make( 'header_scripts', 'crb_head_code', __('Код в HEAD', 'tattoo_theme')),
         Field::make( 'footer_scripts', 'crb_footer_code', __('Код в FOOTER', 'tattoo_theme')),
-        Field::make( 'html', 'crb_text_404', __('Текст на стр. 404', 'tattoo_theme') )
-            ->set_html( 'Извините, страница не найдена &#9785; <br>Вы можете найти посмотреть, что у нас есть или оставить заявку!' ),                           
+        Field::make( 'textarea', 'crb_text_404', __('Текст на стр. 404', 'tattoo_theme') ),                           
     ) )
     ->add_tab( __( 'Контакты', 'tattoo_theme' ), array(
         Field::make( 'text', 'crb_org_name', __('Название организации', 'tattoo_theme')),

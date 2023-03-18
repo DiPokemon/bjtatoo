@@ -6,8 +6,8 @@
             <?php get_template_part( 'template-parts/form', 'vertical' ); ?>       
             <div class="address"><?= $address_city ?>, <?= $address_street ?>, <?= $address_building ?></div>  
             <div class="phones">
-                <span><a href="<?= $contacts_main_phone_href ?>"><?= $contacts_main_phone_front ?></a></span>
-                <span><a href="<?= $contacts_add_phone_href ?>"><?= $contacts_add_phone_front ?></a></span>
+                <span><a href="tel:<?= $contacts_main_phone_href ?>"><?= $contacts_main_phone_front ?></a></span>
+                <span><a href="tel:<?= $contacts_add_phone_href ?>"><?= $contacts_add_phone_front ?></a></span>
             </div>
             <?php get_template_part( 'template-parts/socials' ); ?>
         </div>
