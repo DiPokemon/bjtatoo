@@ -1,4 +1,7 @@
-        <?php get_template_part( 'template-parts/block', 'adv' ); ?>
+        <div class="container">
+          <?php get_template_part( 'template-parts/block', 'adv' ); ?>
+        </div>
+        
         </main>
         <footer>
         <?php include 'template-parts/variables.php' ?>
