@@ -34,6 +34,18 @@
         </div>
     </section>
 
+    <!-- Yandex.RTB R-A-2254384-3 -->
+    <div id="yandex_rtb_R-A-2254384-3"></div>
+    <script>
+    window.yaContextCb.push(()=>{
+      Ya.Context.AdvManager.render({
+        "blockId": "R-A-2254384-3",
+        "renderTo": "yandex_rtb_R-A-2254384-3",
+        "type": "feed"
+      })
+    })
+    </script>
+
     <?php get_template_part( 'template-parts/block', 'portfolio' ); ?>
 
     <section>
