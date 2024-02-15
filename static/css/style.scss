@@ -456,7 +456,11 @@
     gap: 10px;
     padding: 10px;
 
-    .tabs_caption {
+    .tabs_caption{
+      display: none;
+    }
+
+    .tabs_caption:first-child {
       display: inline-block;
       text-decoration: none;
       padding: 6px 10px;
@@ -472,6 +476,7 @@
         cursor: pointer;
       }           
     }
+
     .tabs_caption_active {
       color: $red;
       border-color: $red;
