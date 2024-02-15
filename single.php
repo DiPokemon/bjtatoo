@@ -14,16 +14,15 @@
         <div class="page_content_wrapper post_content_wrapper">
             <div class="page_content post_content">
                 <img loading="lazy" class="post_img" src="<?php the_post_thumbnail_url('full') ?>" alt="<?= $image_alt ?>" title="<?= $image_title ?>">
-                <!-- Yandex.RTB R-A-2254384-3 -->
-                <div id="yandex_rtb_R-A-2254384-3"></div>
+                <!-- Yandex.RTB R-A-2254384-4 -->
+                <div id="yandex_rtb_R-A-2254384-4"></div>
                 <script>
-                window.yaContextCb.push(()=>{
-                    Ya.Context.AdvManager.render({
-                        "blockId": "R-A-2254384-3",
-                        "renderTo": "yandex_rtb_R-A-2254384-3",
-                        "type": "feed"
+                    window.yaContextCb.push(()=>{
+                        Ya.Context.AdvManager.render({
+                            "blockId": "R-A-2254384-4",
+                            "renderTo": "yandex_rtb_R-A-2254384-4"
+                        })
                     })
-                })
                 </script>
                 <?php the_content(); ?>
             </div>
