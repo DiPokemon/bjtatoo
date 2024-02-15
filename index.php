@@ -32,18 +32,16 @@
             </div>
           </div>            
         </div>
-    </section>
-
-    <!-- Yandex.RTB R-A-2254384-3 -->
-    <div id="yandex_rtb_R-A-2254384-3"></div>
+    </section>    
+    <!-- Yandex.RTB R-A-2254384-4 -->
+    <div id="yandex_rtb_R-A-2254384-4"></div>
     <script>
-    window.yaContextCb.push(()=>{
-      Ya.Context.AdvManager.render({
-        "blockId": "R-A-2254384-3",
-        "renderTo": "yandex_rtb_R-A-2254384-3",
-        "type": "feed"
+      window.yaContextCb.push(()=>{
+        Ya.Context.AdvManager.render({
+          "blockId": "R-A-2254384-4",
+          "renderTo": "yandex_rtb_R-A-2254384-4"
+        })
       })
-    })
     </script>
 
     <?php get_template_part( 'template-parts/block', 'portfolio' ); ?>
